@@ -1,5 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { words } from "../src/words";
+import partyNight from "../src/data/party-night.json" with { type: "json" };
 
 test.beforeEach(async ({ page }) => {
   // Keep this setup check independent of audio loading and playback timing.
@@ -54,4 +55,26 @@ test("challenge theme persists and mayor candidates obey both selected filters",
   const actual = (await candidates.allTextContents()).map(text => text.trim());
   expect(new Set(actual).size).toBe(3);
   expect(actual.every(text => allowed.has(text))).toBe(true);
+});
+
+test("party library source persists and supplies only selected level and theme", async ({ page }) => {
+  const errors: string[] = [];
+  page.on("pageerror", error => errors.push(error.message));
+  await page.setViewportSize({ width: 320, height: 740 });
+  await page.goto("/");
+  await page.getByLabel("词库来源", { exact: true }).selectOption("party-night");
+  await page.getByRole("button", { name: "困难", exact: true }).click();
+  await page.getByRole("button", { name: /^网络/ }).click();
+  await page.reload();
+  await expect(page.getByLabel("词库来源", { exact: true })).toHaveValue("party-night");
+  await expect(page.getByRole("button", { name: "困难", exact: true })).toHaveAttribute("aria-pressed", "true");
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.locator(".word-settings").screenshot({ path: ".audio-work/party-library.png" });
+  await page.getByRole("button", { name: "无声预览流程", exact: true }).click();
+  await page.getByRole("button", { name: "跳过此阶段", exact: true }).click();
+  const candidates = page.locator(".word-options button");
+  await expect(candidates).toHaveCount(3);
+  const allowed = new Set(partyNight.words.filter(word => word.level === 3 && word.tag === "网络").map(word => word.w));
+  expect((await candidates.allTextContents()).every(text => allowed.has(text.trim()))).toBe(true);
+  expect(errors).toEqual([]);
 });

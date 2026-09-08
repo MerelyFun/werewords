@@ -1,5 +1,8 @@
-export type Difficulty = "easy" | "hard";
-export type Category = "日常" | "自然" | "饮食" | "趣味";
+import partyNight from "./data/party-night.json" with { type: "json" };
+import steamWords from "./data/steam-words.json" with { type: "json" };
+
+export type Difficulty = "easy" | "medium" | "hard";
+export type Category = string;
 export interface Word {
   id: string;
   text: string;
@@ -63,13 +66,49 @@ export const words: Word[] = groups.flatMap(
       })),
 );
 
+export interface WordLibrary {
+  id: string;
+  name: string;
+  words: Word[];
+  difficulties: { id: Difficulty; label: string }[];
+}
+
+const levels: Record<number, Difficulty> = { 1: "easy", 2: "medium", 3: "hard" };
+/** 新词库只需提供数据适配和目录项；抽词、主题与难度均读取此目录。 */
+export const wordLibraries: WordLibrary[] = [
+  { id: "builtin", name: "原有精选", words, difficulties: [
+    { id: "easy", label: "标准" }, { id: "hard", label: "挑战" },
+  ] },
+  ...([
+    ["3022451195", "你画我歪：乱七八糟啥都有"],
+    ["3416324742", "阴间词汇大合集"],
+  ] as const).map(([sourceId, name]): WordLibrary => ({
+    id: `steam-${sourceId}`,
+    name,
+    words: steamWords.filter(word => word.sourceId === sourceId).map(word => ({
+      ...word, difficulty: word.difficulty as Difficulty,
+    })),
+    difficulties: [{ id: "easy", label: "标准" }, { id: "hard", label: "挑战" }],
+  })),
+  { id: "party-night", name: "群友派对之夜", words: partyNight.words.map((word, index) => ({
+    id: `party-night-${index}`, text: word.w, difficulty: levels[word.level], category: word.tag,
+  })), difficulties: [
+    { id: "easy", label: "简单" }, { id: "medium", label: "中等" }, { id: "hard", label: "困难" },
+  ] },
+];
+
+export function getWordLibrary(id: string): WordLibrary {
+  return wordLibraries.find(library => library.id === id) ?? wordLibraries[0];
+}
+
 export function pickWords(
   difficulty: Difficulty,
   category: Category | "all",
   count = 3,
   random: () => number = Math.random,
+  libraryId = "builtin",
 ): Word[] {
-  const pool = words.filter(
+  const pool = getWordLibrary(libraryId).words.filter(
     (word) =>
       word.difficulty === difficulty &&
       (category === "all" || word.category === category),

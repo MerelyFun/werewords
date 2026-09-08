@@ -459,7 +459,7 @@ export default function App() {
                 onMinus={() => setting({ closeSeconds: state.settings.closeSeconds - 1 })}
                 onPlus={() => setting({ closeSeconds: state.settings.closeSeconds + 1 })} />
             </section>
-            <WordSettings difficulty={state.settings.difficulty} category={state.settings.category} onChange={setting} />
+            <WordSettings libraryId={state.settings.libraryId} difficulty={state.settings.difficulty} category={state.settings.category} onChange={setting} />
             <RoleSettings players={state.settings.players} counts={state.settings.roles}
               onChange={(roles) => setting({ roles })} />
             <button className="text-button audition" disabled={loading} onClick={() => void testVoice()}>

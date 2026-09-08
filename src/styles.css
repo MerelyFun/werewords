@@ -860,7 +860,9 @@ h1, h2, .brand span { font-weight: 600; letter-spacing: .025em; }
 .app-shell:not(.is-playing) header { border: 0; height: 64px; }
 .app-shell:not(.is-playing) .settings { background: #ffffff02; border-color: #b8a17b29; }
 .word-settings { margin-top: 18px; padding: 17px 16px; border: 1px solid #b8a17b29; border-radius: 13px; }
-.difficulty-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 4px; border-radius: 10px; background: #090f1780; }
+.library-select { display: grid; gap: 8px; margin-bottom: 14px; color: #d5b779; font-size: 15px; }
+.library-select select { width: 100%; min-width: 0; min-height: 44px; padding: 8px 10px; border: 1px solid #b8a17b55; border-radius: 8px; background: #111f2b; color: #f3e9d4; font: inherit; color-scheme: dark; }
+.difficulty-tabs { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 4px; padding: 4px; border-radius: 10px; background: #090f1780; }
 .difficulty-tabs button { min-height: 42px; border-radius: 7px; color: #a7afb6; font-size: 16px; }
 .difficulty-tabs button[aria-pressed="true"] { background: #d5b779; color: #14202a; font-weight: 600; box-shadow: 0 2px 8px #0003; }
 .difficulty-hint { font-size: 12px; color: #adb3b7; margin: 12px 0; }
