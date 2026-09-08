@@ -2,3 +2,4 @@
 *.md text eol=lf
 *.json text eol=lf
 *.yml text eol=lf
+assets/wordlists/steam/*.txt -text

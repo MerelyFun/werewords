@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { getWordLibrary } from "../src/words";
 
-for (const sourceId of ["3022451195", "3416324742"]) {
+for (const sourceId of ["3022451195", "3416324742", "2660283448", "2890545389"]) {
   test(`Steam ${sourceId} 选库、切难度、刷新和选词`, async ({ page }) => {
     const errors: string[] = [];
     page.on("pageerror", error => errors.push(error.message));

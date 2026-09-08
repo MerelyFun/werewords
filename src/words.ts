@@ -1,5 +1,6 @@
 import partyNight from "./data/party-night.json" with { type: "json" };
 import steamWords from "./data/steam-words.json" with { type: "json" };
+import steamSources from "./data/steam-sources.json" with { type: "json" };
 
 export type Difficulty = "easy" | "medium" | "hard";
 export type PlayDifficulty = "easy" | "hard";
@@ -80,10 +81,7 @@ export const wordLibraries: WordLibrary[] = [
   { id: "builtin", name: "原有精选", words, difficulties: [
     { id: "easy", label: "标准" }, { id: "hard", label: "挑战" },
   ] },
-  ...([
-    ["3022451195", "你画我歪：乱七八糟啥都有"],
-    ["3416324742", "阴间词汇大合集"],
-  ] as const).map(([sourceId, name]): WordLibrary => ({
+  ...steamSources.map(({ sourceId, name }): WordLibrary => ({
     id: `steam-${sourceId}`,
     name,
     words: steamWords.filter(word => word.sourceId === sourceId).map(word => ({

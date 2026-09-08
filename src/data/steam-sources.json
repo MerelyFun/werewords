@@ -1,0 +1,54 @@
+[
+  {
+    "sourceId": "3022451195",
+    "name": "你画我歪：乱七八糟啥都有",
+    "title": "[简体中文] 你画我歪（乱七八糟啥都有） [243]",
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3022451195",
+    "appId": 1483870,
+    "creatorSteamId": "76561198188598499",
+    "sourceUpdatedAt": "2023-08-19T09:11:07.0000000+00:00",
+    "downloadedOn": "2026-09-09",
+    "originalFile": "assets/wordlists/steam/3022451195.txt",
+    "sha256": "36CE734494273A726EE208072AA2BCA2F3F6B5DB23E58BDAC64B032C193DD72D",
+    "rawWordCount": 243
+  },
+  {
+    "sourceId": "3416324742",
+    "name": "阴间词汇大合集",
+    "title": "[中文] 阴间词汇大合集 [600]",
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3416324742",
+    "appId": 1483870,
+    "creatorSteamId": "76561199073185673",
+    "sourceUpdatedAt": "2025-08-25T13:13:25.0000000+00:00",
+    "downloadedOn": "2026-09-09",
+    "originalFile": "assets/wordlists/steam/3416324742.txt",
+    "sha256": "8264BC4849F30952E4104E695DAAF9C304B4B8AEC60380A89F019411EA833BDF",
+    "rawWordCount": 600
+  },
+  {
+    "sourceId": "2660283448",
+    "name": "笑死人不偿命",
+    "title": "[简体中文] 笑死人不偿命 [329]",
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2660283448",
+    "appId": 1483870,
+    "creatorSteamId": "76561199005293165",
+    "sourceUpdatedAt": "2024-04-13T14:41:48.0000000+00:00",
+    "downloadedOn": "2026-09-09",
+    "originalFile": "assets/wordlists/steam/2660283448.txt",
+    "sha256": "2A9A2BCE78B6793AD0D6D5F161CE103A8A5035B7C5C77C3F067A29F4FC3E0E1F",
+    "rawWordCount": 329
+  },
+  {
+    "sourceId": "2890545389",
+    "name": "乱七八糟你画我歪",
+    "title": "[中文] 乱七八糟你画我歪 [462]",
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2890545389",
+    "appId": 1483870,
+    "creatorSteamId": "76561198867601581",
+    "sourceUpdatedAt": "2024-01-28T14:08:43.0000000+00:00",
+    "downloadedOn": "2026-09-09",
+    "originalFile": "assets/wordlists/steam/2890545389.txt",
+    "sha256": "A95A035BBE3514D04F022A09570C6EB3238683847BCC691CE04873E7CC8028BC",
+    "rawWordCount": 462
+  }
+]
