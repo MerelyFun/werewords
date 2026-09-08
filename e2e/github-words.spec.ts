@@ -24,6 +24,7 @@ for (const selected of selections) {
       const errors: string[] = [];
       page.on("pageerror", error => errors.push(error.message));
       await page.goto("/");
+      await page.locator('.library-picker > summary').click();
       const group = page.getByRole("group", { name: "词库", exact: true });
       for (const library of selected) {
         await group.getByRole("checkbox", { name: library.name, exact: true }).check();
@@ -34,6 +35,7 @@ for (const selected of selections) {
       await page.getByRole("button", { name: label, exact: true }).click();
       await expect(page.getByRole("button", { name: label, exact: true })).toHaveAttribute("aria-pressed", "true");
       await page.reload();
+      await page.locator('.library-picker > summary').click();
       for (const library of libraries) {
         await expect(group.getByRole("checkbox", { name: library.name, exact: true }))
           .toBeChecked({ checked: selected.includes(library) });

@@ -8,11 +8,13 @@ for (const sourceId of ["3022451195", "3416324742", "2660283448", "2890545389"])
     await page.setViewportSize({ width: 320, height: 740 });
     await page.route("**/audio/manifest.json", route => route.fulfill({ json: { ready: false, clips: [] } }));
     await page.goto("/");
+    await page.locator('.library-picker > summary').click();
     const libraryId = `steam-${sourceId}`;
     await page.getByRole("checkbox", { name: getWordLibrary(libraryId).name, exact: true }).check();
     await page.getByRole("checkbox", { name: "原有精选", exact: true }).uncheck();
     await page.getByRole("button", { name: "挑战", exact: true }).click();
     await page.reload();
+    await page.locator('.library-picker > summary').click();
     await expect(page.getByRole("checkbox", { name: getWordLibrary(libraryId).name, exact: true })).toBeChecked();
     await expect(page.getByRole("button", { name: "挑战", exact: true })).toHaveAttribute("aria-pressed", "true");
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);

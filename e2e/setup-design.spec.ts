@@ -42,9 +42,11 @@ test("cover and every configured role have working artwork at narrow width", asy
 
 test("multiple libraries persist without counts or categories and supply challenge candidates", async ({ page }) => {
   await page.goto("/");
+  await page.locator('.library-picker > summary').click();
   await page.getByRole("checkbox", { name: "群友派对之夜", exact: true }).check();
   await page.getByRole("button", { name: "挑战", exact: true }).click();
   await page.reload();
+  await page.locator('.library-picker > summary').click();
   await expect(page.getByRole("checkbox", { name: "原有精选", exact: true })).toBeChecked();
   await expect(page.getByRole("checkbox", { name: "群友派对之夜", exact: true })).toBeChecked();
   await expect(page.getByRole("group", { name: "词库主题", exact: true })).toHaveCount(0);
@@ -62,8 +64,56 @@ test("multiple libraries persist without counts or categories and supply challen
   expect(actual.every(text => allowed.has(text))).toBe(true);
 });
 
+test("library picker collapses by default, scrolls and preserves selection at 320px", async ({ page }) => {
+  const errors: string[] = [];
+  page.on("pageerror", error => errors.push(error.message));
+  await page.setViewportSize({ width: 320, height: 740 });
+  await page.goto("/");
+  const picker = page.locator('details.library-picker');
+  const summary = page.locator('.library-picker > summary');
+  const group = page.getByRole("group", { name: "词库", exact: true });
+  await expect(picker).not.toHaveAttribute("open");
+  await expect(summary).toContainText("词库");
+  await expect(summary).toContainText("原有精选");
+  await expect(group).toBeHidden();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+
+  await summary.click();
+  await expect(picker).toHaveAttribute("open", "");
+  await expect(group).toBeVisible();
+  const scroll = await group.evaluate(element => {
+    const style = getComputedStyle(element);
+    return { maxHeight: style.maxHeight, overflowY: style.overflowY,
+      height: element.clientHeight, contentHeight: element.scrollHeight };
+  });
+  expect(scroll.maxHeight).not.toBe("none");
+  expect(parseFloat(scroll.maxHeight)).toBeGreaterThan(0);
+  expect(scroll.overflowY).toMatch(/^(auto|scroll)$/);
+  expect(scroll.contentHeight).toBeGreaterThan(scroll.height);
+  expect(scroll.height).toBeLessThanOrEqual(parseFloat(scroll.maxHeight) + 1);
+  await group.getByRole("checkbox").last().scrollIntoViewIfNeeded();
+  expect(await group.evaluate(element => element.scrollTop)).toBeGreaterThan(0);
+  await group.getByRole("checkbox", { name: "群友派对之夜", exact: true }).check();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+
+  await summary.click();
+  await expect(picker).not.toHaveAttribute("open");
+  await expect(group).toBeHidden();
+  await expect(summary).toContainText("原有精选 等 2 个");
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.reload();
+  await expect(picker).not.toHaveAttribute("open");
+  await expect(summary).toContainText("原有精选 等 2 个");
+  await page.locator('.library-picker > summary').click();
+  await expect(group.getByRole("checkbox", { name: "原有精选", exact: true })).toBeChecked();
+  await expect(group.getByRole("checkbox", { name: "群友派对之夜", exact: true })).toBeChecked();
+  await expect(group.locator('input:checked')).toHaveCount(2);
+  expect(errors).toEqual([]);
+});
+
 test("at least one library remains selected", async ({ page }) => {
   await page.goto("/");
+  await page.locator('.library-picker > summary').click();
   await expect(page.getByRole("checkbox", { name: "原有精选", exact: true })).toBeDisabled();
   await page.getByRole("checkbox", { name: "群友派对之夜", exact: true }).check();
   await page.getByRole("checkbox", { name: "原有精选", exact: true }).uncheck();
