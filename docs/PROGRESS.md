@@ -157,3 +157,6 @@
 - 验证：npm run build 通过，npm test 42项通过；PLAYWRIGHT_CHANNEL=chrome 下 game/roles/day-stage 相关14项E2E通过。新增320×740、390×844、844×390全流程覆盖；无横向溢出和pageerror。原暂停/恢复/超时与四种胜负回归通过。
 - Browser plugin not available，按 frontend-testing-debugging 使用本地Chrome Playwright。390与320截图目视检查单屏排版，页面非空且无错误遮罩；证据在系统Temp/wolf-day-390.png及wolf-day-320.png。
 - 未单独发布，由同时修改封面的任务统一提交与部署。下一步：统一上线验收及真实手机试玩。
+
+发布证据：代码70ef065，GitHub Actions 34261670014成功。真实Chrome线上验证多库勾选与刷新保存、无词数/主题、语音就绪开局和镇长三候选、390px无溢出、无页面异常通过；截图.audio-work/home-live-v2.png。内置浏览器重启本地服务后也已成功检查首页。
+
