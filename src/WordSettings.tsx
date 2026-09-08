@@ -1,42 +1,29 @@
-import { getWordLibrary, wordLibraries, type Category, type Difficulty } from "./words";
+import { wordLibraries, type PlayDifficulty } from "./words";
 
-const difficulties = [
-  { id: "easy", label: "标准", hint: "熟悉的事物，轻松开局" },
-  { id: "hard", label: "挑战", hint: "更细的线索，更有趣的答案" },
-] as const;
-const themes: { id: Category | "all"; labels: Partial<Record<Difficulty, string>> }[] = [
-  { id: "all", labels: { easy: "全部主题", hard: "全部主题" } },
-  { id: "日常", labels: { easy: "日常生活", hard: "奇妙器物" } },
-  { id: "自然", labels: { easy: "自然万物", hard: "自然奇观" } },
-  { id: "饮食", labels: { easy: "好吃好喝", hard: "风味美食" } },
-  { id: "趣味", labels: { easy: "休闲趣味", hard: "艺术游艺" } },
-];
+const order: Record<string, number> = { builtin: 0, "party-night": 1 };
+const libraries = [...wordLibraries].sort((a, b) => (order[a.id] ?? 2) - (order[b.id] ?? 2));
 
-export function WordSettings({ libraryId, difficulty, category, onChange }: {
-  libraryId: string; difficulty: Difficulty; category: Category | "all";
-  onChange: (settings: { libraryId?: string; difficulty?: Difficulty; category?: Category | "all" }) => void;
+export function WordSettings({ libraryIds, difficulty, onChange }: {
+  libraryIds: string[]; difficulty: PlayDifficulty;
+  onChange: (settings: { libraryIds?: string[]; difficulty?: PlayDifficulty }) => void;
 }) {
-  const library = getWordLibrary(libraryId);
-  const pool = library.words.filter(word => word.difficulty === difficulty);
-  const categories = ["all", ...new Set(pool.map(word => word.category))];
   return <section className="word-settings" aria-label="难度与词库">
-    <div className="library-select"><label htmlFor="word-library">词库来源</label>
-      <select id="word-library" value={library.id} onChange={event => onChange({ libraryId: event.target.value, category: "all", difficulty: "easy" })}>
-        {wordLibraries.map(item => <option key={item.id} value={item.id}>{item.name} · {item.words.length} 词</option>)}
-      </select>
+    <div className="library-heading">词库 <span>可多选</span></div>
+    <div className="library-options" role="group" aria-label="词库">
+      {libraries.map(library => <label className="library-option" key={library.id}>
+        <input type="checkbox" checked={libraryIds.includes(library.id)}
+          disabled={libraryIds.length === 1 && libraryIds.includes(library.id)}
+          onChange={event => onChange({ libraryIds: event.target.checked
+            ? [...libraryIds, library.id] : libraryIds.filter(id => id !== library.id) })} />
+        <span>{library.name}</span>
+      </label>)}
     </div>
-    <div className="difficulty-tabs" role="group" aria-label="难度">
-      {library.difficulties.map(item => <button key={item.id} aria-pressed={item.id === difficulty}
-        onClick={() => onChange({ difficulty: item.id })}>{item.label}</button>)}
-    </div>
-    {library.id === "builtin" && <p className="difficulty-hint">{difficulties.find(item => item.id === difficulty)?.hint}</p>}
-    <div className="theme-options" role="group" aria-label="词库主题">
-      {categories.map(id => {
-        const count = pool.filter(word => id === "all" || word.category === id).length;
-        const label = library.id === "builtin" ? themes.find(theme => theme.id === id)?.labels[difficulty] : id === "all" ? "全部主题" : id;
-        return <button key={id} aria-pressed={category === id} disabled={count < 3}
-          onClick={() => onChange({ category: id })}>{label ?? id}<span>{count}</span></button>;
-      })}
+    <div className="difficulty-row"><span>难度</span>
+      <div className="difficulty-tabs" role="group" aria-label="难度">
+        {([{ id: "easy", label: "标准" }, { id: "hard", label: "挑战" }] as const).map(item =>
+          <button key={item.id} aria-pressed={item.id === difficulty}
+            onClick={() => onChange({ difficulty: item.id })}>{item.label}</button>)}
+      </div>
     </div>
   </section>;
 }

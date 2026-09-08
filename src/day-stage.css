@@ -1,0 +1,57 @@
+/* One upright canvas from sunrise through settlement. Night styles stay isolated. */
+.app-shell.single-stage {
+  background: radial-gradient(ellipse at 50% 17%, #b999601c, transparent 48%), #101b27;
+  min-height: min(850px, 100dvh);
+}
+.single-stage main { display: block; padding: 0 26px 12px; }
+.single-stage.is-playing .stage-heading { flex-direction: column; gap: 14px; margin: 4px 0 20px; }
+.single-stage .stage-heading > .role-art {
+  width: clamp(112px, 19dvh, 166px);
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px #cbaa6810, 0 0 0 9px #cbaa6825, 0 18px 45px #0003;
+}
+.single-stage.is-playing .stage-heading h1 { font-size: 27px; font-weight: 400; letter-spacing: .06em; margin-bottom: 7px; }
+.single-stage.is-playing .stage-heading p { font-size: 12px; color: #a9b1b7; text-wrap: balance; }
+.single-stage.is-playing .big-timer {
+  font-size: clamp(68px, 20vw, 88px);
+  font-weight: 300;
+  letter-spacing: -.035em;
+  line-height: 1.05;
+  color: #f3e4c7;
+  font-variant-numeric: tabular-nums;
+}
+.single-stage.is-playing .big-timer.urgent { color: #f0ad87; }
+.single-stage.is-playing .timer-label { display: block; margin-top: 9px; font-size: 11px; letter-spacing: .18em; color: #afa18a; }
+.single-stage .day-time-track { height: 2px; margin: 20px auto 22px; background: #cbaa681a; overflow: hidden; }
+.single-stage .day-time-track span { display: block; height: 100%; background: #cbaa68; transform-origin: left; transition: transform .2s linear; }
+.single-stage.is-playing .answer-pad { gap: 10px; margin: 0; }
+.single-stage.is-playing .answer-pad button { min-height: 52px; border-color: #afbdc32e; background: #ffffff03; border-radius: 12px; font-size: 18px; }
+.single-stage.is-playing .answer-pad button.chosen { color: #f4d89f; background: #cbaa681c; border-color: #cbaa68; box-shadow: inset 0 0 0 1px #cbaa6820; }
+.single-stage.is-playing .answer-hint { min-height: 22px; margin: 7px 0; color: #dac18f; line-height: 22px; }
+.single-stage.is-playing .primary { min-height: 50px; border-radius: 12px; letter-spacing: .03em; box-shadow: 0 5px 20px #0002; }
+.single-stage.is-playing .stage-controls { border-top: 1px solid #b4a17e22; padding-top: 12px; margin-top: 0; }
+.single-stage.is-playing .stage-controls .secondary { border-color: #afbdc32e; color: #acb4ba; font-size: 12px; border-radius: 10px; }
+.single-stage.is-playing .stage-controls .skip { flex: 1.4; color: #c9b78f; }
+.single-stage.is-playing .reset-link { margin: 6px auto 0; min-height: 32px; }
+.single-stage.is-playing .vote-panel { padding: 10px 0 24px; }
+.single-stage.is-playing .vote-panel p { margin: 18px 0 28px; }
+.single-stage.is-playing .verdict-panel { padding: 10px 0 24px; }
+.single-stage.is-playing .verdict-panel p { margin: 12px 0 24px; text-align: center; }
+.single-stage.is-playing .result-panel { padding: 22px 0 18px; }
+.single-stage.is-playing .result-panel strong { font-size: 48px; margin: 12px 0; }
+.single-stage.is-playing .result-panel p { margin: 12px 0 30px; }
+.single-stage.is-playing .closed-panel { border: 0; background: none; padding: 20px 0 40px; }
+.single-stage.is-playing .closed-panel .small-timer { font-size: 64px; }
+@media (max-width: 360px), (max-height: 760px) {
+  .single-stage main { padding-left: 20px; padding-right: 20px; }
+  .single-stage .stage-heading > .role-art { width: 104px; }
+  .single-stage.is-playing .stage-heading { gap: 12px; margin-bottom: 14px; }
+  .single-stage.is-playing .stage-heading h1 { font-size: 23px; }
+  .single-stage.is-playing .big-timer { font-size: 68px; }
+  .single-stage .day-time-track { margin: 15px 0 17px; }
+  .single-stage.is-playing .answer-pad button { min-height: 46px; }
+}
+@media (max-height: 650px) and (orientation: landscape) {
+  .app-shell.single-stage { width: min(100%, 480px); }
+  .single-stage.is-playing main { display: block; }
+}

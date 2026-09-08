@@ -9,10 +9,11 @@ for (const sourceId of ["3022451195", "3416324742"]) {
     await page.route("**/audio/manifest.json", route => route.fulfill({ json: { ready: false, clips: [] } }));
     await page.goto("/");
     const libraryId = `steam-${sourceId}`;
-    await page.getByLabel("词库来源").selectOption(libraryId);
+    await page.getByRole("checkbox", { name: getWordLibrary(libraryId).name, exact: true }).check();
+    await page.getByRole("checkbox", { name: "原有精选", exact: true }).uncheck();
     await page.getByRole("button", { name: "挑战", exact: true }).click();
     await page.reload();
-    await expect(page.getByLabel("词库来源")).toHaveValue(libraryId);
+    await expect(page.getByRole("checkbox", { name: getWordLibrary(libraryId).name, exact: true })).toBeChecked();
     await expect(page.getByRole("button", { name: "挑战", exact: true })).toHaveAttribute("aria-pressed", "true");
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     await page.getByRole("button", { name: "无声预览流程", exact: true }).click();

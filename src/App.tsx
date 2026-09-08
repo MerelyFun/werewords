@@ -393,8 +393,10 @@ export default function App() {
     : stage.startsWith("seer") || nightStep?.roleId === "beholder" ? "seer"
     : stage.startsWith("werewolf") || nightStep?.roleId === "minion" || stage === "discussion" || state.winner === "werewolves" ? "werewolf" : "villager");
   const shownWord = revealsWord ? (concealed ? "已遮挡" : state.secret?.text) : stage === "result" ? state.secret?.text : undefined;
+  const singleStage = active && (!isNight || stage === "dayIntro");
+  const showOpposite = isNight && stage !== "mayor" && stage !== "dayIntro";
   return (
-    <div className={`app-shell ${active ? "is-playing" : ""} ${revealsWord ? "is-reading" : ""} ${stage === "mayor" ? "is-choosing" : ""}`}>
+    <div className={`app-shell ${active ? "is-playing" : "is-setup"} ${revealsWord ? "is-reading" : ""} ${stage === "mayor" ? "is-choosing" : ""} ${singleStage ? "single-stage" : ""}`}>
       {!revealsWord && <header>
         <a
           href="./"
@@ -441,6 +443,7 @@ export default function App() {
                   setting({ daySeconds: state.settings.daySeconds + 60 })
                 }
               />
+              <details className="advanced-settings"><summary>更多设置 <span>⌄</span></summary>
               <Stepper
                 label="看词时间"
                 value={`${state.settings.nightSeconds} 秒`}
@@ -458,10 +461,12 @@ export default function App() {
                 count={state.settings.closeSeconds} min={1} max={15}
                 onMinus={() => setting({ closeSeconds: state.settings.closeSeconds - 1 })}
                 onPlus={() => setting({ closeSeconds: state.settings.closeSeconds + 1 })} />
+              </details>
             </section>
-            <WordSettings libraryId={state.settings.libraryId} difficulty={state.settings.difficulty} category={state.settings.category} onChange={setting} />
+            <WordSettings libraryIds={state.settings.libraryIds} difficulty={state.settings.difficulty} onChange={setting} />
             <RoleSettings players={state.settings.players} counts={state.settings.roles}
               onChange={(roles) => setting({ roles })} />
+            <div className="setup-actions">
             <button className="text-button audition" disabled={loading} onClick={() => void testVoice()}>
               <Play size={14} />{loading ? "播放中" : "试听"}
             </button>
@@ -479,12 +484,11 @@ export default function App() {
               {missingRoleAudio ? "预演所选角色" : voiceReady ? "开始夜晚" : "无声预览流程"}
               <ArrowRight size={23} />
             </button>
-
-
+            </div>
           </>
         ) : (
           <>
-            {stage !== "mayor" && <TablePrompt wordOnly={revealsWord} title={title} description={description} art={art}
+            {showOpposite && <TablePrompt wordOnly={revealsWord} title={title} description={description} art={art}
               word={shownWord} timer={state.remaining > 0 ? (speaking ? "…" : timeText) : undefined}
               response={stage === "day" ? response : undefined} />}
             {revealsWord ? <h1 className="sr-only">{title}</h1> : <section className="stage-heading" aria-live="polite">
@@ -536,24 +540,27 @@ export default function App() {
               <section className="day-panel">
                 <div
                   className={`big-timer ${state.remaining <= 30 ? "urgent" : ""}`}
+                  role="timer" aria-label="猜词剩余时间"
                 >
                   {timeText}
                 </div>
                 <span className="timer-label">
                   {paused ? "已暂停" : "猜词倒计时"}
                 </span>
+                <div className="day-time-track" aria-hidden="true"><span style={{ transform: `scaleX(${state.remaining / state.settings.daySeconds})` }} /></div>
                 <div className="answer-pad">
                   {["是", "不是", "可能", "接近了"].map((text) => (
                     <button
                       key={text}
                       className={response === text ? "chosen" : ""}
+                      aria-pressed={response === text}
                       onClick={() => setResponse(text)}
                     >
                       {text}
                     </button>
                   ))}
                 </div>
-                <p className="answer-hint">
+                <p className="answer-hint" role="status">
                   {response
                     ? `镇长回答：${response}`
                     : ""}

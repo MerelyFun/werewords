@@ -162,7 +162,7 @@ describe("设置数据校验", () => {
     expect(configured.settings).toEqual({
       ...defaultSettings,
       difficulty: "hard",
-      category: "自然",
+      category: "all",
       players: 7,
       roles: { ...defaultSettings.roles, villager: 5 },
     });

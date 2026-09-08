@@ -895,3 +895,45 @@ h1, h2, .brand span { font-weight: 600; letter-spacing: .025em; }
   .role-row > .role-art { width: 42px; }
   .role-row .role-info strong { font-size: 13px; }
 }
+/* Setup follows the moonlit cover concept; gameplay keeps its reading layout. */
+.is-setup { position: relative; background: #0d1823; }
+.is-setup header { position: absolute; z-index: 2; top: 0; left: 0; right: 0; margin: 0 24px; }
+.is-setup .brand { gap: 8px; }
+.is-setup .brand span { color: #eed7ad; font-size: 25px; }
+.is-setup .brand svg { width: 20px; }
+.is-setup header .pill { border: 0; color: #c3bba9; padding-right: 0; font-family: var(--serif); font-size: 17px; }
+.is-setup main { padding: 0 24px; }
+.is-setup .cover-hero { height: 335px; margin: 0 -24px 6px; }
+.is-setup .cover-hero img { object-position: center; }
+.is-setup .cover-hero::after { background: linear-gradient(180deg, #08121ed9, transparent 28%, #0d182315 58%, #0d1823); }
+.is-setup .cover-hero h1 { bottom: 19px; font-size: clamp(30px, 8.5vw, 40px); font-weight: 400; letter-spacing: .025em; margin: 0; }
+.is-setup .settings { padding: 0; background: none; border: 0; border-radius: 0; }
+.is-setup .setting-row { min-height: 66px; font-size: 18px; font-family: var(--serif); border-bottom: 1px solid #b6c1cd26; }
+.is-setup .stepper { gap: 0; border: 1px solid #a6b2bc38; border-radius: 24px; overflow: hidden; }
+.is-setup .stepper button { border: 0; border-radius: 0; width: 40px; height: 40px; background: #ffffff04; }
+.is-setup .stepper output { min-width: 78px; font-size: 18px; }
+.advanced-settings summary { cursor: pointer; list-style: none; text-align: center; padding: 18px 0; font-size: 14px; color: #a9b1ba; }
+.advanced-settings summary::-webkit-details-marker { display: none; }
+.advanced-settings summary span { margin-left: 6px; }
+.is-setup .word-settings { padding: 10px 0 0; border: 0; border-radius: 0; margin-top: 0; }
+.library-heading { font: 22px var(--serif); margin: 0 0 13px; }
+.library-heading span { margin-left: 8px; font: 12px "Microsoft YaHei", sans-serif; color: #98a4af; }
+.library-options { display: grid; gap: 9px; }
+.library-option { display: flex; gap: 13px; align-items: center; min-height: 48px; padding: 10px 13px; border: 1px solid #a8b5c12c; background: #ffffff02; border-radius: 9px; cursor: pointer; font: 17px/1.5 var(--serif); }
+.library-option:has(:checked) { border-color: #d0b27b69; background: #d0b27b08; }
+.library-option input { color-scheme: dark; flex: 0 0 19px; width: 19px; height: 19px; margin: 0; accent-color: #d7b681; cursor: pointer; }
+.library-option input:disabled { opacity: 1; cursor: default; }
+.library-option input:focus-visible { outline: 2px solid #edcb8a; outline-offset: 4px; }
+.difficulty-row { display: flex; align-items: center; gap: 24px; padding: 20px 0; margin-top: 20px; border-block: 1px solid #b6c1cd26; font: 20px var(--serif); }
+.is-setup .difficulty-tabs { flex: 1; padding: 3px; border: 1px solid #a8b5c12c; background: #ffffff03; }
+.is-setup .difficulty-tabs button[aria-pressed="true"] { background: linear-gradient(120deg,#e0c497,#c4a06c); }
+.is-setup .role-settings { border: 0; border-radius: 0; padding: 12px 0 18px; margin: 0; border-bottom: 1px solid #b6c1cd26; }
+.is-setup .role-summary-title { font: 20px var(--serif); }
+.is-setup .roster-preview .role-art { width: 38px; margin-left: -5px; }
+.is-setup .role-row .stepper output { min-width: 20px; }
+.is-setup .role-row .stepper button { width: 28px; height: 32px; }
+.setup-actions { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 12px 24px; padding-top: 22px; }
+.setup-actions .notice,.setup-actions .role-note { grid-column: 1 / -1; grid-row: 1; margin: 0; }
+.is-setup .audition { margin: 0; padding: 12px 0; font: 16px var(--serif); color: #b3bdc6; }
+.is-setup .start { margin: 0; min-height: 52px; border-radius: 28px; font: 23px var(--serif); background: linear-gradient(115deg,#f0d6ac,#cfaa75); box-shadow: inset 0 1px 0 #fff8,0 5px 24px #0002; }
+@media(max-width:360px) { .is-setup main { padding: 0 20px; } .is-setup .cover-hero { margin-inline: -20px; height: 290px; } .library-option { font-size: 15px; } .is-setup .stepper output { min-width: 65px; } .is-setup header { margin-inline: 20px; } }

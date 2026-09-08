@@ -148,3 +148,32 @@ Stars为本次API快照，是游戏项目认可而非单独词库评价。未导
 已按原文导入两个独立来源：乱七八糟243词（标准158/挑战85）、阴间词汇600词（标准271/挑战329）。源内无重复；跨库25个同词面保留各自来源，因抽词只使用选中库，不造成同轮重复候选。分类是本项目编辑判断。原件、哈希、分级及来源说明见[导入记录](STEAM_WORD_IMPORT.md)。
 
 新增来源目录项、原文一致性与抽词测试；39项单元测试通过、构建通过，Chrome两项专用E2E通过。未将下载成功表述为已取得再分发许可。
+
+## 2026-09-09：Steam 三组前三复核
+
+范围为 Draw & Guess（1483870）工坊中文词库，数字取 Steam 官方 GetPublishedFileDetails 当前 subscriptions；日期统一北京时间。标题词数仅为标题标注，本轮未下载。只调查，未追加导入。
+
+### 订阅人数前三
+
+从totaluniquesubscribers首页30项批量API核验，前三同时为累计榜与当前订阅排序前三：
+- 就是多[1267]：326928订阅，更新2021-06-09，https://steamcommunity.com/sharedfiles/filedetails/?id=2499017147
+- 啥都有[245]：195409订阅，更新2021-08-21（此前网页不同时区日期为08-20），https://steamcommunity.com/sharedfiles/filedetails/?id=2511225319
+- 动物[126]：154892订阅，更新2021-08-13，https://steamcommunity.com/sharedfiles/filedetails/?id=2517506712
+
+### 最新发布且当前订阅超过100
+
+扫描mostrecent前5页150项并批量API核验。第1页30项均不达标；前三分别位于第2页第1/13/16项，扫描到第46项即覆盖前三。排序字段time_created，不用time_updated替代。
+- 折棒新三国梗百科[138]：495订阅，2026-01-31 13:02发布，https://steamcommunity.com/sharedfiles/filedetails/?id=3657075067
+- 黑夜君临[96]：185订阅，2025-12-09 20:22发布，https://steamcommunity.com/sharedfiles/filedetails/?id=3620710861
+- 燕云十六声[123]：128订阅，2025-11-09 19:29发布，https://steamcommunity.com/sharedfiles/filedetails/?id=3602553865
+
+三者本次time_updated与time_created相同，分别为新三国梗、黑夜君临游戏、燕云团建自用专题，不能称通用日常词库。
+
+### 最近更新且当前订阅超过10000
+
+额外维度兼顾维护时间和人气。扫描累计订阅榜前5页150项，末项累计订阅8381，已低于门槛；当前订阅不高于累计值，故覆盖当前过万候选。读取官方SSR字段后按time_updated排序，前三另经API交叉核验：
+- 笑死人不偿命[329]：106133订阅，2024-04-13更新，https://steamcommunity.com/sharedfiles/filedetails/?id=2660283448
+- 乱七八糟你画我歪[462]：26683订阅，2024-01-28更新，https://steamcommunity.com/sharedfiles/filedetails/?id=2890545389
+- 00后童年动画片词库[208]：14418订阅，2023-10-20更新，https://steamcommunity.com/sharedfiles/filedetails/?id=3055118418
+
+注意第二项462词与已导入的3022451195（243词）不是同一份。第三组找到2024更新条目，补充此前未充分核验的近期过万候选。以上为本轮列表与API快照，非Steam官方质量榜。

@@ -40,41 +40,32 @@ test("cover and every configured role have working artwork at narrow width", asy
   expect(errors).toEqual([]);
 });
 
-test("challenge theme persists and mayor candidates obey both selected filters", async ({ page }) => {
+test("multiple libraries persist without counts or categories and supply challenge candidates", async ({ page }) => {
   await page.goto("/");
+  await page.getByRole("checkbox", { name: "群友派对之夜", exact: true }).check();
   await page.getByRole("button", { name: "挑战", exact: true }).click();
-  await page.getByRole("button", { name: /^奇妙器物/ }).click();
   await page.reload();
-  await expect(page.getByRole("button", { name: "挑战", exact: true })).toHaveAttribute("aria-pressed", "true");
-  await expect(page.getByRole("button", { name: /^奇妙器物/ })).toHaveAttribute("aria-pressed", "true");
+  await expect(page.getByRole("checkbox", { name: "原有精选", exact: true })).toBeChecked();
+  await expect(page.getByRole("checkbox", { name: "群友派对之夜", exact: true })).toBeChecked();
+  await expect(page.getByRole("group", { name: "词库主题", exact: true })).toHaveCount(0);
+  expect(await page.locator(".word-settings").innerText()).not.toMatch(/\d+\s*词/);
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.screenshot({ path: ".audio-work/home-v2.png", fullPage: true });
   await page.getByRole("button", { name: "无声预览流程", exact: true }).click();
   await page.getByRole("button", { name: "跳过此阶段", exact: true }).click();
   const candidates = page.locator(".word-options button");
   await expect(candidates).toHaveCount(3);
-  const allowed = new Set(words.filter(word => word.difficulty === "hard" && word.category === "日常").map(word => word.text));
+  const allowed = new Set([...words.filter(word => word.difficulty === "hard").map(word => word.text),
+    ...partyNight.words.filter(word => word.level === 3).map(word => word.w)]);
   const actual = (await candidates.allTextContents()).map(text => text.trim());
   expect(new Set(actual).size).toBe(3);
   expect(actual.every(text => allowed.has(text))).toBe(true);
 });
 
-test("party library source persists and supplies only selected level and theme", async ({ page }) => {
-  const errors: string[] = [];
-  page.on("pageerror", error => errors.push(error.message));
-  await page.setViewportSize({ width: 320, height: 740 });
+test("at least one library remains selected", async ({ page }) => {
   await page.goto("/");
-  await page.getByLabel("词库来源", { exact: true }).selectOption("party-night");
-  await page.getByRole("button", { name: "困难", exact: true }).click();
-  await page.getByRole("button", { name: /^网络/ }).click();
-  await page.reload();
-  await expect(page.getByLabel("词库来源", { exact: true })).toHaveValue("party-night");
-  await expect(page.getByRole("button", { name: "困难", exact: true })).toHaveAttribute("aria-pressed", "true");
-  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
-  await page.locator(".word-settings").screenshot({ path: ".audio-work/party-library.png" });
-  await page.getByRole("button", { name: "无声预览流程", exact: true }).click();
-  await page.getByRole("button", { name: "跳过此阶段", exact: true }).click();
-  const candidates = page.locator(".word-options button");
-  await expect(candidates).toHaveCount(3);
-  const allowed = new Set(partyNight.words.filter(word => word.level === 3 && word.tag === "网络").map(word => word.w));
-  expect((await candidates.allTextContents()).every(text => allowed.has(text.trim()))).toBe(true);
-  expect(errors).toEqual([]);
+  await expect(page.getByRole("checkbox", { name: "原有精选", exact: true })).toBeDisabled();
+  await page.getByRole("checkbox", { name: "群友派对之夜", exact: true }).check();
+  await page.getByRole("checkbox", { name: "原有精选", exact: true }).uncheck();
+  await expect(page.getByRole("checkbox", { name: "群友派对之夜", exact: true })).toBeDisabled();
 });

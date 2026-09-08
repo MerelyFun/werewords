@@ -1,5 +1,5 @@
 import { findNightStep, getNightSteps, normalizeRoles, type RoleNightStage } from "./roles";
-import { getWordLibrary, pickWords, type Category, type Difficulty, type Word } from "./words";
+import { normalizeLibraryIds, pickLibraryWords, type Category, type PlayDifficulty, type Word } from "./words";
 
 export type Stage =
   | "setup"
@@ -23,8 +23,8 @@ export interface Settings {
   nightSeconds: number;
   closeSeconds: number;
   roles: Record<string, number>;
-  difficulty: Difficulty;
-  libraryId: string;
+  difficulty: PlayDifficulty;
+  libraryIds: string[];
   category: Category | "all";
 }
 export const defaultSettings: Settings = {
@@ -34,7 +34,7 @@ export const defaultSettings: Settings = {
   closeSeconds: 4,
   roles: normalizeRoles(undefined, 6),
   difficulty: "easy",
-  libraryId: "builtin",
+  libraryIds: ["builtin"],
   category: "all",
 };
 export interface GameState {
@@ -107,7 +107,7 @@ function enter(state: GameState, stage: Stage): GameState {
 function start(state: GameState, candidates?: Word[]): GameState {
   const selection = candidates?.length
     ? candidates
-    : pickWords(state.settings.difficulty, state.settings.category, 3, Math.random, state.settings.libraryId);
+    : pickLibraryWords(state.settings.difficulty, state.settings.libraryIds);
   return enter(
     {
       ...initialState,
@@ -157,11 +157,12 @@ export function reducer(state: GameState, action: Action): GameState {
       const input = { ...state.settings, ...action.settings };
       // 持久化设置可能来自旧版本或被改写，只接受白名单字段和值。
       const players = clamp(input.players, 4, 10, defaultSettings.players);
-      const library = getWordLibrary(input.libraryId);
-      const difficulty = library.difficulties.some(item => item.id === input.difficulty)
-        ? input.difficulty : library.difficulties[0].id;
-      const category = library.words.filter(word => word.difficulty === difficulty && word.category === input.category).length >= 3
-        ? input.category : "all";
+      const legacy = action.settings as Partial<Settings> & { libraryId?: unknown };
+      const libraryIds = normalizeLibraryIds(
+        Object.hasOwn(action.settings, "libraryIds") ? action.settings.libraryIds
+          : Object.hasOwn(legacy, "libraryId") ? [legacy.libraryId] : input.libraryIds,
+      );
+      const difficulty = input.difficulty === "hard" ? "hard" : "easy";
       const settings: Settings = {
         players,
         roles: normalizeRoles(input.roles, players),
@@ -178,9 +179,9 @@ export function reducer(state: GameState, action: Action): GameState {
           30,
           defaultSettings.nightSeconds,
         ),
-        libraryId: library.id,
+        libraryIds,
         difficulty,
-        category,
+        category: "all",
       };
       return { ...state, settings };
     }

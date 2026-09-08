@@ -2,6 +2,7 @@ import partyNight from "./data/party-night.json" with { type: "json" };
 import steamWords from "./data/steam-words.json" with { type: "json" };
 
 export type Difficulty = "easy" | "medium" | "hard";
+export type PlayDifficulty = "easy" | "hard";
 export type Category = string;
 export interface Word {
   id: string;
@@ -101,6 +102,33 @@ export function getWordLibrary(id: string): WordLibrary {
   return wordLibraries.find(library => library.id === id) ?? wordLibraries[0];
 }
 
+/** 只接受目录内的来源，且始终保留至少一个来源。 */
+export function normalizeLibraryIds(value: unknown): string[] {
+  const ids = Array.isArray(value) ? value : [];
+  const valid = [...new Set(ids.filter((id): id is string =>
+    typeof id === "string" && wordLibraries.some(library => library.id === id),
+  ))];
+  return valid.length ? valid : ["builtin"];
+}
+
+/** 多库混抽：标准包含原简单/中等，挑战包含原困难；按词面去重。 */
+export function pickLibraryWords(
+  difficulty: PlayDifficulty,
+  libraryIds: readonly string[],
+  count = 3,
+  random: () => number = Math.random,
+): Word[] {
+  const unique = new Map<string, Word>();
+  for (const id of normalizeLibraryIds(libraryIds)) {
+    for (const word of getWordLibrary(id).words) {
+      const matches = difficulty === "hard" ? word.difficulty === "hard" : word.difficulty !== "hard";
+      const key = word.text.trim().normalize("NFKC").toLocaleLowerCase("zh-CN");
+      if (matches && !unique.has(key)) unique.set(key, word);
+    }
+  }
+  return shuffleWords([...unique.values()], count, random);
+}
+
 export function pickWords(
   difficulty: Difficulty,
   category: Category | "all",
@@ -113,6 +141,10 @@ export function pickWords(
       word.difficulty === difficulty &&
       (category === "all" || word.category === category),
   );
+  return shuffleWords(pool, count, random);
+}
+
+function shuffleWords(pool: Word[], count: number, random: () => number): Word[] {
   // Fisher–Yates: 不使用有偏的随机 sort；每轮候选不重复。
   for (let index = pool.length - 1; index > 0; index--) {
     const target = Math.min(
