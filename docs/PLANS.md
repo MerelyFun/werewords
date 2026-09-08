@@ -75,3 +75,7 @@
 ## 下一步
 
 本轮裁剪资源检查、原生 WebAudio 解码与播放验证已通过；完成真实手机试听后结束阶段 3；随后按用户指定 GitHub 仓库推进阶段 4。当前不再等待 API 密钥。
+
+## 2026-09-09 发布完成
+
+阶段4已完成：公开仓库 MerelyFun/werewords、main自动发布、Pages HTTPS、正式网址资源与游戏交互验收均通过。网址 https://merelyfun.github.io/werewords/ 。下一步仅真实手机现场试玩与用户后续要求的扩展配音。
