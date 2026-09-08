@@ -1,0 +1,86 @@
+export type Difficulty = "easy" | "hard";
+export type Category = "日常" | "自然" | "饮食" | "趣味";
+export interface Word {
+  id: string;
+  text: string;
+  difficulty: Difficulty;
+  category: Category;
+}
+
+// 自行整理的中文常用词，不来自官方应用词库。
+const groups: [Category, Difficulty, string][] = [
+  [
+    "日常",
+    "easy",
+    "雨伞 书包 闹钟 牙刷 毛巾 电梯 镜子 钥匙 台灯 枕头 冰箱 拖鞋 自行车 邮箱 门铃 窗帘",
+  ],
+  [
+    "自然",
+    "easy",
+    "彩虹 月亮 星星 太阳 雪花 沙漠 森林 大海 瀑布 火山 蝴蝶 熊猫 海豚 企鹅 松树 蘑菇",
+  ],
+  [
+    "饮食",
+    "easy",
+    "火锅 饺子 面条 包子 蛋糕 冰淇淋 西瓜 草莓 香蕉 苹果 牛奶 豆浆 饼干 爆米花 巧克力 茶叶",
+  ],
+  [
+    "趣味",
+    "easy",
+    "风筝 秋千 滑梯 积木 气球 拼图 魔术 电影 足球 篮球 跳绳 游泳 滑雪 拔河 迷宫 木马",
+  ],
+  [
+    "日常",
+    "hard",
+    "指南针 显微镜 投影仪 打字机 留声机 订书机 温度计 望远镜 自动售货机 红绿灯 电路板 回形针 储蓄罐 洗碗机 吸尘器 放大镜",
+  ],
+  [
+    "自然",
+    "hard",
+    "极光 海市蜃楼 日食 潮汐 珊瑚 苔藓 萤火虫 螳螂 穿山甲 蒲公英 猪笼草 钟乳石 龙卷风 含羞草 食人鱼 石榴树",
+  ],
+  [
+    "饮食",
+    "hard",
+    "提拉米苏 可颂 杏仁豆腐 糖葫芦 螺蛳粉 狮子头 松鼠桂鱼 杨枝甘露 酸梅汤 千层面 马卡龙 桂花糕 肠粉 油条 芝士焗饭 椰子冻",
+  ],
+  [
+    "趣味",
+    "hard",
+    "密室逃脱 皮影戏 万花筒 九连环 华容道 套娃 陶笛 独轮车 定格动画 立体书 飞行棋 抖空竹 手影 水上芭蕾 花样滑冰 沙画",
+  ],
+];
+
+export const words: Word[] = groups.flatMap(
+  ([category, difficulty, text], group) =>
+    text
+      .split(" ")
+      .map((word, index) => ({
+        id: `w-${group}-${index}`,
+        text: word,
+        category,
+        difficulty,
+      })),
+);
+
+export function pickWords(
+  difficulty: Difficulty,
+  category: Category | "all",
+  count = 3,
+  random: () => number = Math.random,
+): Word[] {
+  const pool = words.filter(
+    (word) =>
+      word.difficulty === difficulty &&
+      (category === "all" || word.category === category),
+  );
+  // Fisher–Yates: 不使用有偏的随机 sort；每轮候选不重复。
+  for (let index = pool.length - 1; index > 0; index--) {
+    const target = Math.min(
+      index,
+      Math.max(0, Math.floor(random() * (index + 1))),
+    );
+    [pool[index], pool[target]] = [pool[target]!, pool[index]!];
+  }
+  return pool.slice(0, Math.max(0, count));
+}
