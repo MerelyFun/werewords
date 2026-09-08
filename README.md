@@ -1,6 +1,6 @@
 # 狼人真言网页项目
 
-基于 Werewords（狼人真言）玩法的中文聚会助手。第一版已实现完整游戏流程；现使用用户提供的录音裁剪成 13 段播报，本轮桌面真实音频验证通过，尚未发布网站。
+基于 Werewords（狼人真言）玩法的中文聚会助手。第一版已实现完整游戏流程；现使用用户提供的录音裁剪成 13 段播报，本轮桌面真实音频验证通过，GitHub Pages 首次发布正在进行。
 
 已确认方向：线下聚会，所有玩家共用一部手机。身份使用线下实体卡；网页负责出词、夜晚看词引导、计时与结算辅助。
 
@@ -56,6 +56,8 @@ npm run voice:check
 
 原录音保存在 [assets/audio/host-source.mp3](assets/audio/host-source.mp3)，切点记录在 [docs/audio-cuts.json](docs/audio-cuts.json)。运行 `npm run voice:cut` 可重新裁剪，再用 `npm run voice:check` 检查静态资源。裁剪需要 Python、ffmpeg 和 ffprobe。本轮验证结果见 [进度](docs/PROGRESS.md)。OpenAI 生成脚本仅保留为可选工具，当前无需配置密钥。
 
-项目站点通常形如 `https://<用户名>.github.io/<仓库名>/`。目前只有本地仓库，尚未关联 GitHub remote，也没有线上地址。
+公开网址：[狼人真言](https://merelyfun.github.io/werewords/)。仓库：[MerelyFun/werewords](https://github.com/MerelyFun/werewords)。
+
+推送到 `main` 会由 `.github/workflows/pages.yml` 自动运行检查、构建并发布 `dist`；仅修改文档不重新部署，也可手动运行工作流。网页支持仓库子路径，无需后端或 API 密钥。首次发布验收结果见进度文档。
 
 本项目是独立的非官方工具；计划使用自行编写的界面、说明和中文词库。

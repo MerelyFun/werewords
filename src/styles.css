@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Table WenKai";
+  src: url("/fonts/table-wenkai-regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
 :root {
   font-family: "PingFang SC", "Microsoft YaHei UI", "Microsoft YaHei", system-ui, sans-serif;
   color: #f4eddd;
@@ -8,7 +15,7 @@
   --gold: #cfaa69;
   --muted: #9ea8ae;
   --line: #34414c;
-  --serif: "PingFang SC", "Microsoft YaHei UI", "Microsoft YaHei", system-ui, sans-serif;
+  --serif: "Table WenKai", "Kaiti SC", "KaiTi", serif;
 }
 * {
   box-sizing: border-box;
@@ -828,12 +835,12 @@ h1, h2, .brand span { font-weight: 600; letter-spacing: .025em; }
 .stepper output, .small-timer, .big-timer { font-family: inherit; }
 .is-choosing .stage-heading { margin: 28px 0; }
 .is-choosing .word-options { flex-direction: column; gap: 12px; }
-.is-choosing .word-options button { font-size: 28px; font-weight: 500; padding: 18px 12px; }
+.is-choosing .word-options button { font-size: 36px; font-weight: 400; padding: 18px 12px; }
 .is-choosing .mayor-panel { gap: 16px; }
 .is-reading main { display: flex; flex-direction: column; min-height: min(820px, 100dvh); padding: 0 20px; }
-.is-reading .opposite-face, .is-reading .secret-panel { flex: 1; min-height: 230px; display: flex; justify-content: center; align-items: center; padding: 20px 0; margin: 0; border: 0; border-radius: 0; }
+.is-reading .opposite-face, .is-reading .secret-panel { container-type: inline-size; flex: 1; min-height: 230px; display: flex; justify-content: center; align-items: center; padding: 20px 0; margin: 0; border: 0; border-radius: 0; }
 .is-reading .opposite-face { border-top: 1px solid #ffffff16; }
-.is-reading .opposite-word, .is-reading .secret-panel strong { font-family: inherit; font-size: clamp(54px, 15vw, 84px); font-weight: 600; line-height: 1.35; letter-spacing: .035em; color: #f6eedb; margin: 0; text-align: center; max-width: 100%; overflow-wrap: anywhere; }
+.is-reading .opposite-word, .is-reading .secret-panel strong { font-family: var(--serif); font-size: clamp(76px, 24cqw, 104px); font-weight: 400; line-height: 1.25; letter-spacing: .015em; color: #f6eedb; margin: 0; text-align: center; max-width: 100%; overflow-wrap: anywhere; text-wrap: balance; }
 .is-reading .stage-controls { flex: 0; justify-content: center; margin-top: 0; gap: 20px; }
 .is-reading .stage-controls .secondary, .is-reading .stage-controls .icon-button { flex: none; width: 44px; height: 44px; border: 0; color: #9ca7b0; }
 .is-reading .reset-link { height: 32px; margin: 2px auto 8px; color: #7c8994; }

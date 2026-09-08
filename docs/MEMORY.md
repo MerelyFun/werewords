@@ -40,3 +40,7 @@
 
 - 镇长选词仅单向显示。先知/狼人看词保留双向大字答案，去掉标题、说明、插图和倒计时，仅留必要图标控制。
 - 字体统一使用本机中文无衬线字体栈，不依赖外部字体下载。
+
+## 2026-09-09 发布授权
+
+用户明确要求部署到 GitHub 并公开访问。使用已登录账号 MerelyFun，新建公开仓库 werewords；origin=https://github.com/MerelyFun/werewords.git，Pages目标 https://merelyfun.github.io/werewords/。已启用 GitHub Actions 发布来源和 HTTPS。
