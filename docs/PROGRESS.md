@@ -132,3 +132,5 @@
 - 验证：39单元通过；首次全量E2E19通过1失败（select隐式标签匹配），改显式标签后相关5项全部通过；构建通过。Browser skill未提供，按frontend-testing-debugging使用本机Chrome Playwright，320px截图确认来源/三级难度与主题。
 
 发布结果：统一代码提交e7668a7，GitHub Actions 34259140897成功。线上Chrome验证https://merelyfun.github.io/werewords/?v=e7668a7 的群友来源、困难/网络选择与刷新保存、390px无溢出、无pageerror；截图.audio-work/party-live.png。来源样式与空主题隐藏调整后，相关5项E2E再次全过，构建通过。新增候选仍未导入。
+
+补充另一任务回传的正式站Steam验证：真实Chrome390×844，两来源分别选择挑战、刷新保存、进入镇长三候选，均属于对应来源hard，无横向溢出及pageerror。3022451195样本为见钱眼开/羊入虎口/狗急跳墙；3416324742样本为酒壮怂人胆/UZI/chopsticks。内置浏览器正式站访问超时，真实Chrome验证成功。截图位于E:/Code/wolf-steamcmd-temp/verified-<id>.png（另一任务保存）。
