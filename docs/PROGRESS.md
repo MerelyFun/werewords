@@ -130,3 +130,5 @@
 - 配合另一任务保留两份Steam词库接入，共享目录统一发布。
 - 新调查候选见docs/NEW_WORD_CANDIDATES.md，未导入其内容。
 - 验证：39单元通过；首次全量E2E19通过1失败（select隐式标签匹配），改显式标签后相关5项全部通过；构建通过。Browser skill未提供，按frontend-testing-debugging使用本机Chrome Playwright，320px截图确认来源/三级难度与主题。
+
+发布结果：统一代码提交e7668a7，GitHub Actions 34259140897成功。线上Chrome验证https://merelyfun.github.io/werewords/?v=e7668a7 的群友来源、困难/网络选择与刷新保存、390px无溢出、无pageerror；截图.audio-work/party-live.png。来源样式与空主题隐藏调整后，相关5项E2E再次全过，构建通过。新增候选仍未导入。
