@@ -167,4 +167,5 @@
 - steam-sources.json集中记录工坊ID、链接、作者、更新日期、下载日期、原件路径与SHA-256；同源唯一登记，混抽按规范化词面去重。
 - 三榜已扩展前十，方法、范围、链接与已导入标记见STEAM_RANK_POPULAR.md和STEAM_RANK_NEWEST.md，其余候选未自动导入。
 - 验证：50项单元测试、25项Chrome E2E、生产构建、13段录音检查全部通过；覆盖四份词库选取、难度、刷新保存、320px布局与候选来源。
-- 下一步：发布并验证线上新库。
+- 发布：ae5164a，GitHub Actions 34262820064成功；正式网址真实Chrome验证两新库多选、刷新保存、挑战混抽三候选、390px无溢出、无pageerror均通过，截图E:/Code/wolf-steamcmd-temp/steam-four-live.png已目视检查。四份已提交原件SHA-256与清单一致，Git禁止转换原件换行。
+- 下一步：按用户后续选库继续导入；当前排名候选仅调查。
