@@ -114,7 +114,8 @@ describe("GitHub 两库原文与来源", () => {
         const expectedKeys = [...new Set(allowed.map(word => key(word.text)))].sort();
         const selected = pickLibraryWords(difficulty, [...ids, ...ids], allowed.length + 1, () => 0.5);
         expect(selected.map(word => key(word.text)).sort()).toEqual(expectedKeys);
-        selected.forEach(word => expect(allowed).toContainEqual(word));
+        const allowedById = new Map(allowed.map(word => [word.id, word]));
+        selected.forEach(word => expect(allowedById.get(word.id)).toEqual(word));
         expect(pickLibraryWords(difficulty, ids, allowed.length + 1, () => 0.5)).toEqual(selected);
       }
     });
