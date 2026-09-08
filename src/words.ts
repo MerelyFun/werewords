@@ -4,9 +4,10 @@ import steamSources from "./data/steam-sources.json" with { type: "json" };
 import handleWords from "./data/handle-words.json" with { type: "json" };
 import partiWords from "./data/parti-words.json" with { type: "json" };
 import githubSources from "./data/github-sources.json" with { type: "json" };
+import generatedWords from "./data/generated-words.json" with { type: "json" };
 
 export type Difficulty = "easy" | "medium" | "hard";
-export type PlayDifficulty = "easy" | "hard";
+export type PlayDifficulty = "easy" | "hard" | "all";
 export type Category = string;
 export interface Word {
   id: string;
@@ -88,6 +89,11 @@ export const wordLibraries: WordLibrary[] = [
   { id: "builtin", name: "原有精选", words, difficulties: [
     { id: "easy", label: "标准" }, { id: "hard", label: "挑战" },
   ] },
+  { id: "generated-wanxiang", name: "万象趣猜", words: generatedWords.map(word => ({
+    ...word, difficulty: word.difficulty as Difficulty,
+  })), difficulties: [
+    { id: "easy", label: "标准" }, { id: "hard", label: "挑战" },
+  ] },
   ...githubSources.map(source => ({
     id: source.id, name: source.name, words: githubWords[source.id],
     difficulties: [{ id: "easy" as const, label: "标准" }, { id: "hard" as const, label: "挑战" }],
@@ -120,7 +126,7 @@ export function normalizeLibraryIds(value: unknown): string[] {
   return valid.length ? valid : ["builtin"];
 }
 
-/** 多库混抽：标准包含原简单/中等，挑战包含原困难；按词面去重。 */
+/** 多库混抽：游戏使用 all，历史分级仅保留作数据整理；按词面去重。 */
 export function pickLibraryWords(
   difficulty: PlayDifficulty,
   libraryIds: readonly string[],
@@ -130,7 +136,7 @@ export function pickLibraryWords(
   const unique = new Map<string, Word>();
   for (const id of normalizeLibraryIds(libraryIds)) {
     for (const word of getWordLibrary(id).words) {
-      const matches = difficulty === "hard" ? word.difficulty === "hard" : word.difficulty !== "hard";
+      const matches = difficulty === "all" || (difficulty === "hard" ? word.difficulty === "hard" : word.difficulty !== "hard");
       const key = word.text.trim().normalize("NFKC").toLocaleLowerCase("zh-CN");
       if (matches && !unique.has(key)) unique.set(key, word);
     }

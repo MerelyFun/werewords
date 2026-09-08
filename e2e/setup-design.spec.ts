@@ -1,5 +1,7 @@
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import { test, expect } from "@playwright/test";
-import { words } from "../src/words";
+import { pickLibraryWords, words } from "../src/words";
 import partyNight from "../src/data/party-night.json" with { type: "json" };
 
 test.beforeEach(async ({ page }) => {
@@ -40,11 +42,11 @@ test("cover and every configured role have working artwork at narrow width", asy
   expect(errors).toEqual([]);
 });
 
-test("multiple libraries persist without counts or categories and supply challenge candidates", async ({ page }) => {
+test("multiple libraries persist without counts, categories or difficulty and supply full-pool candidates", async ({ page }) => {
   await page.goto("/");
   await page.locator('.library-picker > summary').click();
   await page.getByRole("checkbox", { name: "群友派对之夜", exact: true }).check();
-  await page.getByRole("button", { name: "挑战", exact: true }).click();
+  await expect(page.getByRole("button", { name: /^(标准|挑战)$/ })).toHaveCount(0);
   await page.reload();
   await page.locator('.library-picker > summary').click();
   await expect(page.getByRole("checkbox", { name: "原有精选", exact: true })).toBeChecked();
@@ -57,8 +59,8 @@ test("multiple libraries persist without counts or categories and supply challen
   await page.getByRole("button", { name: "跳过此阶段", exact: true }).click();
   const candidates = page.locator(".word-options button");
   await expect(candidates).toHaveCount(3);
-  const allowed = new Set([...words.filter(word => word.difficulty === "hard").map(word => word.text),
-    ...partyNight.words.filter(word => word.level === 3).map(word => word.w)]);
+  const allowed = new Set([...words.map(word => word.text),
+    ...partyNight.words.map(word => word.w)]);
   const actual = (await candidates.allTextContents()).map(text => text.trim());
   expect(new Set(actual).size).toBe(3);
   expect(actual.every(text => allowed.has(text))).toBe(true);
@@ -76,6 +78,7 @@ test("library picker collapses by default, scrolls and preserves selection at 32
   await expect(summary).toContainText("词库");
   await expect(summary).toContainText("原有精选");
   await expect(group).toBeHidden();
+  await page.screenshot({ path: join(tmpdir(), "wolf-no-difficulty-320.png"), fullPage: true });
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 
   await summary.click();
@@ -119,3 +122,23 @@ test("at least one library remains selected", async ({ page }) => {
   await page.getByRole("checkbox", { name: "原有精选", exact: true }).uncheck();
   await expect(page.getByRole("checkbox", { name: "群友派对之夜", exact: true })).toBeDisabled();
 });
+
+
+for (const difficulty of ["easy", "medium", "hard"]) {
+  test(`旧 ${difficulty} 保存设置自动改为全池并正常出词`, async ({ page }) => {
+    const libraryIds = ["builtin", "party-night", "generated-wanxiang"];
+    await page.addInitScript(({ difficulty, libraryIds }) => {
+      localStorage.setItem("werewords-settings-v1", JSON.stringify({ difficulty, libraryIds }));
+      Math.random = () => 0.5;
+    }, { difficulty, libraryIds });
+    await page.goto("/");
+    await expect(page.getByRole("button", { name: /^(标准|挑战)$/ })).toHaveCount(0);
+    await expect.poll(() => page.evaluate(() =>
+      JSON.parse(localStorage.getItem("werewords-settings-v1") || "{}").difficulty,
+    )).toBe("all");
+    await page.getByRole("button", { name: "无声预览流程", exact: true }).click();
+    await page.getByRole("button", { name: "跳过此阶段", exact: true }).click();
+    const expected = pickLibraryWords("all", libraryIds, 3, () => 0.5).map(word => word.text);
+    await expect(page.locator(".word-options button")).toHaveText(expected);
+  });
+}

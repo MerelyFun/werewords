@@ -1,0 +1,602 @@
+[
+  {
+    "text": "表情包",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "弹幕",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "短视频",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "直播间",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "热搜",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "点赞",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "粉丝",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "网红",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "主播",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "美颜滤镜",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "二维码",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "朋友圈",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "热评",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "剧透",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "开箱视频",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "吃播",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "变装视频",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "游戏直播",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "虚拟主播",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "数字人",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "盲盒",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "手办",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "猫咖",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "云吸猫",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "奶茶续命",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "打工人",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "干饭人",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "吃瓜群众",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "社恐",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "社牛",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "网课",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "直播带货",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "探店",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "团购",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "种草",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "拔草",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "电子书",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "氪金",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "开黑",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "游戏皮肤",
+    "category": "网络/梗词",
+    "difficulty": "standard"
+  },
+  {
+    "text": "破防",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "躺平",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "内卷",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "精神内耗",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "情绪价值",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "松弛感",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "班味",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "硬控",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "显眼包",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "搭子",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "饭搭子",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "电子榨菜",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "雪糕刺客",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "嘴替",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "拿捏",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "天花板",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "烟火气",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "多巴胺穿搭",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "特种兵式旅游",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "围炉煮茶",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "数字游民",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "活人感",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "赛博对账",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "谷子",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "主理人",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "偷感",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "抽象",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "小孩哥",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "浓人",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "淡人",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "人机感",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "卡皮巴拉",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "脆皮大学生",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "爆改",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "早八人",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "打卡式旅游",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "反向旅游",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "情绪稳定",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "人间清醒",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "钝感力",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "边界感",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "氛围感",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "仪式感",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "反差萌",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "社交电量",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "社交天花板",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "社交悍匪",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "社交牛杂症",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "凡尔赛文学",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "发疯文学",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "废话文学",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "发癫",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "摆烂",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "摸鱼",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "划水",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "打脸",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "真香",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "预制朋友圈",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "神仙打架",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "梦幻联动",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "名场面",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "打野",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "回忆杀",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "爷青回",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "童年阴影",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "意难平",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "白月光",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "替身文学",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "恋爱脑",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "磕糖",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "嗑CP",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "上头",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "快乐水",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "补刀",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "赛博朋克",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "电子木鱼",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "赛博养生",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "云监工",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "云旅游",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "锦鲤",
+    "category": "网络/梗词",
+    "difficulty": "challenge"
+  }
+]

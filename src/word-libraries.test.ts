@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { getWordLibrary, normalizeLibraryIds, pickLibraryWords, pickWords, wordLibraries } from "./words";
 import { initialState, reducer, type Settings } from "./game";
 
@@ -25,14 +25,14 @@ describe("词库来源", () => {
     expect(selected.every(word => allowed.includes(word))).toBe(true);
   });
 
-  it("多库挑战不受旧主题限制且不混入未选择库", () => {
+  it("多库全池不受旧难度和主题限制且不混入未选择库", () => {
     const ids = ["party-night", "steam-3416324742"];
     const configured = reducer(initialState, { type: "SETTINGS", settings: {
       libraryIds: ids, difficulty: "hard", category: "网络",
     } });
     expect(configured.settings.category).toBe("all");
-    const allowed = ids.flatMap(id => getWordLibrary(id).words).filter(word => word.difficulty === "hard");
-    const selected = pickLibraryWords("hard", ids, 10000, () => 0.5);
+    const allowed = ids.flatMap(id => getWordLibrary(id).words);
+    const selected = pickLibraryWords(configured.settings.difficulty, ids, 10000, () => 0.5);
     expect(selected.every(word => allowed.includes(word))).toBe(true);
     expect(selected.some(word => word.id.startsWith("party-night-"))).toBe(true);
     expect(selected.some(word => word.id.startsWith("steam-"))).toBe(true);
@@ -56,7 +56,7 @@ describe("词库来源", () => {
     const old = { libraryId: "party-night", difficulty: "medium", category: "网络" } as unknown as Partial<Settings>;
     const migrated = reducer(initialState, { type: "SETTINGS", settings: old });
     expect(migrated.settings.libraryIds).toEqual(["party-night"]);
-    expect(migrated.settings.difficulty).toBe("easy");
+    expect(migrated.settings.difficulty).toBe("all");
     expect(migrated.settings.category).toBe("all");
     expect(migrated.settings).not.toHaveProperty("libraryId");
     const updated = reducer(migrated, { type: "SETTINGS", settings: { players: 7 } });
@@ -65,4 +65,19 @@ describe("词库来源", () => {
     expect(reducer(initialState, { type: "SETTINGS", settings: both }).settings.libraryIds).toEqual(["builtin"]);
     expect(reducer(migrated, { type: "SETTINGS", settings: { libraryIds: [] } }).settings.libraryIds).toEqual(["builtin"]);
   });
+});
+
+
+it.each(["easy", "medium", "hard"])("旧 %s 设置开局仍按全池抽词", difficulty => {
+  const libraryIds = ["builtin", "party-night", "generated-wanxiang"];
+  const saved = { libraryIds, difficulty } as unknown as Partial<Settings>;
+  const configured = reducer(initialState, { type: "SETTINGS", settings: saved });
+  expect(configured.settings.difficulty).toBe("all");
+  const expected = pickLibraryWords("all", libraryIds, 3, () => 0.5);
+  const random = vi.spyOn(Math, "random").mockReturnValue(0.5);
+  try {
+    expect(reducer(configured, { type: "START" }).candidates).toEqual(expected);
+  } finally {
+    random.mockRestore();
+  }
 });

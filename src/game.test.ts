@@ -154,14 +154,14 @@ describe("设置数据校验", () => {
     expect(reducer(clean, { type: "START" }).candidates).toHaveLength(3);
   });
 
-  it("保留合法枚举和未更新字段，开局后不允许修改设置", () => {
+  it("忽略旧难度并保留未更新字段，开局后不允许修改设置", () => {
     const configured = reducer(initialState, {
       type: "SETTINGS",
       settings: { difficulty: "hard", category: "自然", players: 7.4 },
     });
     expect(configured.settings).toEqual({
       ...defaultSettings,
-      difficulty: "hard",
+      difficulty: "all",
       category: "all",
       players: 7,
       roles: { ...defaultSettings.roles, villager: 5 },

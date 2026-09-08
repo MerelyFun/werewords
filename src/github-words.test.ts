@@ -86,10 +86,11 @@ describe("GitHub 两库原文与来源", () => {
         }
         const configured = reducer(initialState, { type: "SETTINGS", settings: { libraryIds: [id], difficulty } });
         expect(configured.settings.libraryIds).toEqual([id]);
+        expect(configured.settings.difficulty).toBe("all");
         const started = reducer(configured, { type: "START" });
         expect(started.candidates).toHaveLength(3);
         expect(new Set(started.candidates.map(word => key(word.text))).size).toBe(3);
-        started.candidates.forEach(word => expect(allowed).toContainEqual(word));
+        started.candidates.forEach(word => expect(data).toContainEqual(word));
       });
     }
   }
@@ -105,11 +106,11 @@ describe("GitHub 两库原文与来源", () => {
     expect(getWordLibrary("github-parti").words).toEqual(partiWords);
   });
 
-  for (const difficulty of ["easy", "hard"] as const) {
+  for (const difficulty of ["all", "easy", "hard"] as const) {
     it(`${difficulty}两库及全库混抽按规范化词面去重，重复勾选不扩充词池`, () => {
       for (const ids of [libraries.map(library => library.id), wordLibraries.map(library => library.id)]) {
         const allowed = ids.flatMap(id => getWordLibrary(id).words)
-          .filter(word => difficulty === "hard" ? word.difficulty === "hard" : word.difficulty !== "hard");
+          .filter(word => difficulty === "all" || (difficulty === "hard" ? word.difficulty === "hard" : word.difficulty !== "hard"));
         const expectedKeys = [...new Set(allowed.map(word => key(word.text)))].sort();
         const selected = pickLibraryWords(difficulty, [...ids, ...ids], allowed.length + 1, () => 0.5);
         expect(selected.map(word => key(word.text)).sort()).toEqual(expectedKeys);

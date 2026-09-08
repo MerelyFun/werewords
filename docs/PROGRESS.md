@@ -161,6 +161,13 @@
 发布证据：代码70ef065，GitHub Actions 34261670014成功。真实Chrome线上验证多库勾选与刷新保存、无词数/主题、语音就绪开局和镇长三候选、390px无溢出、无页面异常通过；截图.audio-work/home-live-v2.png。内置浏览器重启本地服务后也已成功检查首页。
 
 
+## 2026-09-09：GitHub 词库双榜
+
+- 完成按Star前10和Star>50按词库文件最近提交前10的候选核验，见docs/GITHUB_WORD_RANKINGS.md。不限语言，保留真实小型示例并标规模，排除NLP和无公开答案数据项目。
+- 最新按文件提交UTC排序；MikhaD此次仅变量重命名，scribble印尼语为2026-09-06新增，不沿用英语2023日期代表所有语种。
+- 仅文档调查，未导入、未部署，未运行代码测试。下一步等待用户选库后审阅与接入。
+
+
 ## 2026-09-09：Steam 两库接入与三榜前十
 
 - 新增笑死人不偿命329词、乱七八糟你画我歪462词；四份Steam合计1634条来源记录、1571不同词面。新增标准235/挑战556，保留原文与行号。
@@ -169,3 +176,40 @@
 - 验证：50项单元测试、25项Chrome E2E、生产构建、13段录音检查全部通过；覆盖四份词库选取、难度、刷新保存、320px布局与候选来源。
 - 发布：ae5164a，GitHub Actions 34262820064成功；正式网址真实Chrome验证两新库多选、刷新保存、挑战混抽三候选、390px无溢出、无pageerror均通过，截图E:/Code/wolf-steamcmd-temp/steam-four-live.png已目视检查。四份已提交原件SHA-256与清单一致，Git禁止转换原件换行。
 - 下一步：按用户后续选库继续导入；当前排名候选仅调查。
+
+
+## 2026-09-09：仅中文GitHub词库重查
+
+- 中文实际出题库Star候选前10及Star>50文件最近提交榜见docs/GITHUB_CHINESE_WORD_RANKINGS.md。严格最新榜确认9项，不以未完成示例或外语凑第10。
+- 新找到Parti 125星、880词、2026-07-16实质扩库；Earth-K 119星、877条/776不同词面。高星教学示例与4题小库均标规模。
+- 核验REST元数据、实际词文件、调用代码及path提交；明确发消息修正/目录移动不等于新词。仅调查，未导入、未部署，未运行代码测试。下一步由用户选库后审阅接入。
+
+
+## 2026-09-09：汉兜与Parti接入
+
+- 新增汉兜424词（标准51/挑战373）、Parti880词（标准617/挑战263），两个独立来源可多选混抽；保留既有来源和设置，候选按归一化词面去重。
+- 固定上游版本、原件SHA-256、来源注册表与可复现导入脚本齐全；MIT及Parti非商业许可随站点wordlist-notices.txt发布。详见GITHUB_WORD_IMPORT.md。
+- 验证：61项单元、31项全量Chrome E2E、生产构建和13段录音检查通过。覆盖两库单选/混选、两档难度、刷新保存、三候选正确及320px无溢出。Browser plugin not available，按frontend-testing-debugging使用现有Chrome Playwright；390px截图已目视确认两库显示与勾选、无错误遮罩或控制台错误，证据C:/Users/革命成功/AppData/Local/Temp/wolf-github-libraries.png。
+- 真人对1304词的难度适配仍待试玩反馈，未声称上游官方分级。发布结果待下方补记。
+
+发布完成：024b08f，GitHub Actions 34263906760成功。正式网址真实Chrome390×844验证两库勾选、挑战、刷新保存、真实音频就绪开局和三候选属于对应词库通过；样本货真价实/乌云吃彩虹/金盆洗手，无溢出、无页面或控制台错误。线上wordlist-notices.txt HTTP200且包含Parti非商业条款；已提交原件SHA-256与清单一致。截图C:/Users/革命成功/AppData/Local/Temp/wolf-github-live.png已目视检查。下一步：真人试玩反馈难度；其余调查候选未导入。
+
+## 2026-09-09：万象趣猜660词（本地）
+
+- 自编660词，标准430、挑战230；14类覆盖生活、美食、人物景观、文体、动植物、网络梗和抽象反差。并行子任务提供文化与网络候选，主任务完成整库去重、别称替换、分级与接入。完整词单和证据见GENERATED_WORD_LIBRARY.md。
+- npm test 61项通过；npm run build通过（主包632kB体积提示）。Chrome320×740验证标准／挑战选库保存与三候选、无溢出和控制台异常；截图系统Temp/wolf-wanxiang.png。
+- 保留原有未提交GitHub词库等改动；未提交或部署。下一步：实际聚会校准梗词熟悉度，后续统一发布。
+
+
+## 2026-09-09：词库下拉选择
+
+- WordSettings改为默认收起的原生details下拉，多选和至少一库规则保留；已选摘要单行省略，展开列表最大300px或45dvh，内部滚动。
+- 已完成390px真实Chrome检查：默认收起、多选、收起摘要、刷新保存、Enter键展开，无溢出和pageerror，截图C:/Users/革命成功/AppData/Local/Temp/wolf-library-dropdown.png目视正常。Browser plugin not available，沿用frontend-testing-debugging的现有Playwright路径。
+- 构建通过；全量浏览器回归与发布待下方补记。
+
+## 2026-09-09：暂停难度筛选
+
+- 按用户要求移除标准／挑战控件，保留折叠词库多选；所有选中库全难度混抽并按词面去重。旧easy/medium/hard设置统一忽略，数据历史分级保留。
+- 验证：65项单元、32项Chrome E2E、生产构建、13段录音检查通过。320px截图Temp/wolf-no-difficulty-320.png已目视检查，无难度控件且折叠多选正常；旧三档设置的全池出词已确定性验证。沿用frontend-testing-debugging的Playwright路径（Browser plugin not available）。
+- 修复另一任务10a4b26单独提交组件造成的CI编译失败；统一发布结果后补。
+

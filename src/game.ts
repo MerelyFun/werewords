@@ -33,7 +33,7 @@ export const defaultSettings: Settings = {
   nightSeconds: 8,
   closeSeconds: 4,
   roles: normalizeRoles(undefined, 6),
-  difficulty: "easy",
+  difficulty: "all",
   libraryIds: ["builtin"],
   category: "all",
 };
@@ -107,7 +107,7 @@ function enter(state: GameState, stage: Stage): GameState {
 function start(state: GameState, candidates?: Word[]): GameState {
   const selection = candidates?.length
     ? candidates
-    : pickLibraryWords(state.settings.difficulty, state.settings.libraryIds);
+    : pickLibraryWords("all", state.settings.libraryIds);
   return enter(
     {
       ...initialState,
@@ -162,7 +162,8 @@ export function reducer(state: GameState, action: Action): GameState {
         Object.hasOwn(action.settings, "libraryIds") ? action.settings.libraryIds
           : Object.hasOwn(legacy, "libraryId") ? [legacy.libraryId] : input.libraryIds,
       );
-      const difficulty = input.difficulty === "hard" ? "hard" : "easy";
+      // 暂停难度筛选，旧设置的 easy/medium/hard 均不再限制词池。
+      const difficulty = "all";
       const settings: Settings = {
         players,
         roles: normalizeRoles(input.roles, players),

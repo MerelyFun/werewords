@@ -70,7 +70,7 @@ npm run voice:check
 
 新增“汉兜 handle”（424条成语）与“Parti”（880条分类猜词），可单独或多选混抽；标准/挑战为本项目整理。固定版本、原件哈希、重建方法和许可见[接入记录](docs/GITHUB_WORD_IMPORT.md)。Parti词库保留非商业许可，完整声明随站点发布于[词库许可](https://merelyfun.github.io/werewords/wordlist-notices.txt)。
 
-开局按词库名称多选，再选标准或挑战，设置自动保存。“群友派对之夜”300词也可参与混抽；界面不显示词数或主题分类。来源与扩展方式见[群友词库接入](docs/PARTY_WORD_IMPORT.md)。Steam候选榜见[订阅与最近更新前十](docs/STEAM_RANK_POPULAR.md)、[最新发布前十](docs/STEAM_RANK_NEWEST.md)。
+开局按词库名称多选，全部难度混合抽取，设置自动保存；暂不提供标准／挑战选择，旧难度设置也不限制词池。“群友派对之夜”300词也可参与混抽；界面不显示词数或主题分类。来源与扩展方式见[群友词库接入](docs/PARTY_WORD_IMPORT.md)。Steam候选榜见[订阅与最近更新前十](docs/STEAM_RANK_POPULAR.md)、[最新发布前十](docs/STEAM_RANK_NEWEST.md)。
 
 
 ## 2026-09-09 首页与多选词库调整
@@ -80,3 +80,7 @@ npm run voice:check
 - 难度统一标准/挑战，标准合并原简单与中等；兼容旧单库设置并忽略旧分类。
 - 验证：构建、42项单元测试、20项Chrome浏览器测试通过，320px无横向溢出；390px截图已检查。内置浏览器初次连接失败，使用真实Chrome完成验证。
 - 白天页面已合并，最终构建与23项浏览器测试全通过；扩展角色配音仍待补充。
+
+## 万象趣猜
+
+新增自编综合词库660词（标准430／挑战230），涵盖近年热词、经典梗、古今中外人物景物、生活常识与脑洞概念。可按名称独立选择或混抽；[完整词单与整理原则](docs/GENERATED_WORD_LIBRARY.md)。本轮为本地接入。

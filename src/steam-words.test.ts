@@ -31,8 +31,9 @@ describe("Steam 原始词库接入", () => {
         expect(new Set(selected.map(word => word.text)).size).toBe(3);
         expect(selected.every(word => allowed.includes(word))).toBe(true);
         let state = reducer(initialState, { type: "SETTINGS", settings: { libraryIds: [libraryId], difficulty } });
+        expect(state.settings.difficulty).toBe("all");
         state = reducer(state, { type: "START" });
-        expect(state.candidates.every(word => allowed.includes(word))).toBe(true);
+        expect(state.candidates.every(word => library.words.includes(word))).toBe(true);
       });
     }
   }

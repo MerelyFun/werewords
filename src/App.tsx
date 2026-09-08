@@ -463,7 +463,7 @@ export default function App() {
                 onPlus={() => setting({ closeSeconds: state.settings.closeSeconds + 1 })} />
               </details>
             </section>
-            <WordSettings libraryIds={state.settings.libraryIds} difficulty={state.settings.difficulty} onChange={setting} />
+            <WordSettings libraryIds={state.settings.libraryIds} onChange={setting} />
             <RoleSettings players={state.settings.players} counts={state.settings.roles}
               onChange={(roles) => setting({ roles })} />
             <div className="setup-actions">

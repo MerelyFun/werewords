@@ -1,0 +1,1203 @@
+[
+  {
+    "text": "孔子",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "李白",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "杜甫",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "苏轼",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "秦始皇",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "汉武帝",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "唐太宗",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "武则天",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "诸葛亮",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "刘备",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "关羽",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "曹操",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "赵云",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "张飞",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "项羽",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "刘邦",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "花木兰",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "岳飞",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "包拯",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "郑和",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "鲁迅",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "李清照",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "陶渊明",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "司马迁",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "屈原",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "孙悟空",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "猪八戒",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "唐僧",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "沙僧",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "白龙马",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "哪吒",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "嫦娥",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "后羿",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "女娲",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "杨戬",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "姜子牙",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "白娘子",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "林黛玉",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "贾宝玉",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "武松",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "宋江",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "葫芦娃",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "黑猫警长",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "哆啦A梦",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "皮卡丘",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "名侦探柯南",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "蜡笔小新",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "樱桃小丸子",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "海绵宝宝",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "派大星",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "米老鼠",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "白雪公主",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "小红帽",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "灰姑娘",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "哈利波特",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "蜘蛛侠",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "钢铁侠",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "爱因斯坦",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "牛顿",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "居里夫人",
+    "category": "人物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "长城",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "故宫",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "天安门",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "天坛",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "颐和园",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "兵马俑",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "黄山",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "泰山",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "华山",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "峨眉山",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "庐山",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "张家界",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "九寨沟",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "西湖",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "洱海",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "洞庭湖",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "鄱阳湖",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "青海湖",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "长江",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "黄河",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "珠穆朗玛峰",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "桂林山水",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "布达拉宫",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "莫高窟",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "黄果树瀑布",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "日月潭",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "东方明珠",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "广州塔",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "黄鹤楼",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "岳阳楼",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "大雁塔",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "丽江古城",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "乌镇",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "平遥古城",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "香港",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "澳门",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "上海",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "重庆",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "成都",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "三亚",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "哈尔滨",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "威尼斯",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "巴黎",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "伦敦",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "东京",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "埃及金字塔",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "埃菲尔铁塔",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "自由女神像",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "比萨斜塔",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "罗马斗兽场",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "泰姬陵",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "富士山",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "大本钟",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "悉尼歌剧院",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "撒哈拉沙漠",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "亚马孙雨林",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "北极",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "南极",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "尼亚加拉瀑布",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "大堡礁",
+    "category": "景物",
+    "difficulty": "standard"
+  },
+  {
+    "text": "春节",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "元宵节",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "清明节",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "端午节",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "七夕",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "中秋节",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "重阳节",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "除夕",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "元旦",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "国庆节",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "圣诞节",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "万圣节",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "情人节",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "儿童节",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "教师节",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "泼水节",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "舞龙",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "舞狮",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "剪纸",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "书法",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "国画",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "京剧",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "相声",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "皮影戏",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "变脸",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "杂技",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "秧歌",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "广场舞",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "灯会",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "庙会",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "春联",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "红包",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "压岁钱",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "年夜饭",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "春晚",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "拜年",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "守岁",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "扫墓",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "赛龙舟",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "赏月",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "猜灯谜",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "放风筝",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "二十四节气",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "生肖",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "太极拳",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "象棋",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "围棋",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "麻将",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "武术",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "功夫",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "茶道",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "瓷器",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "旗袍",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "汉服",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "唐装",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "四合院",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "园林",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "牌坊",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "水墨画",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "青花瓷",
+    "category": "文化",
+    "difficulty": "standard"
+  },
+  {
+    "text": "齐天大圣",
+    "category": "人物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "美人鱼",
+    "category": "人物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "无头骑士",
+    "category": "人物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "阿拉丁",
+    "category": "人物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "福尔摩斯",
+    "category": "人物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "匹诺曹",
+    "category": "人物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "爱丽丝",
+    "category": "人物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "小王子",
+    "category": "人物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "罗密欧",
+    "category": "人物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "丘比特",
+    "category": "人物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "圣诞老人",
+    "category": "人物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "财神",
+    "category": "人物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "月老",
+    "category": "人物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "门神",
+    "category": "人物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "阎王",
+    "category": "人物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "河神",
+    "category": "人物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "钟馗",
+    "category": "人物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "土地公",
+    "category": "人物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "济公",
+    "category": "人物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "白骨精",
+    "category": "人物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "海市蜃楼",
+    "category": "景物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "极光",
+    "category": "景物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "日食",
+    "category": "景物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "月食",
+    "category": "景物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "日晕",
+    "category": "景物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "流星雨",
+    "category": "景物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "银河",
+    "category": "景物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "黑洞",
+    "category": "景物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "彩虹",
+    "category": "景物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "北斗七星",
+    "category": "景物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "火山口",
+    "category": "景物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "冰川",
+    "category": "景物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "溶洞",
+    "category": "景物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "温泉",
+    "category": "景物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "绿洲",
+    "category": "景物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "梯田",
+    "category": "景物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "天涯海角",
+    "category": "景物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "世外桃源",
+    "category": "景物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "海底世界",
+    "category": "景物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "空中花园",
+    "category": "景物",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "丝绸之路",
+    "category": "文化",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "四大发明",
+    "category": "文化",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "科举",
+    "category": "文化",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "状元",
+    "category": "文化",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "御膳",
+    "category": "文化",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "圣旨",
+    "category": "文化",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "尚方宝剑",
+    "category": "文化",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "免死金牌",
+    "category": "文化",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "虎符",
+    "category": "文化",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "传国玉玺",
+    "category": "文化",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "鸿门宴",
+    "category": "文化",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "桃园结义",
+    "category": "文化",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "三顾茅庐",
+    "category": "文化",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "空城计",
+    "category": "文化",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "草船借箭",
+    "category": "文化",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "精卫填海",
+    "category": "文化",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "诺亚方舟",
+    "category": "文化",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "阿拉丁神灯",
+    "category": "文化",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "潘多拉魔盒",
+    "category": "文化",
+    "difficulty": "challenge"
+  },
+  {
+    "text": "特洛伊木马",
+    "category": "文化",
+    "difficulty": "challenge"
+  }
+]
+
