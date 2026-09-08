@@ -1,5 +1,113 @@
 {
-  "ready": false,
-  "provider": "openai",
-  "clips": []
+  "ready": true,
+  "provider": "user-recording",
+  "clips": [
+    "test",
+    "nightIntro",
+    "mayor",
+    "mayorClose",
+    "seer",
+    "seerClose",
+    "werewolf",
+    "werewolfClose",
+    "dayIntro",
+    "accusation",
+    "discussion",
+    "verdict",
+    "result"
+  ],
+  "assets": {
+    "test": {
+      "start": 0,
+      "end": 3.529,
+      "duration": 3.529,
+      "sha256": "a394ac886379c4e4e9cd7ec7246ebb13b0f722bc4180fc94d5becc9269006068",
+      "text": "准备完毕。请确认所有人都能清楚听见。"
+    },
+    "nightIntro": {
+      "start": 3.529,
+      "end": 7.514,
+      "duration": 3.985,
+      "sha256": "306992c97834f95acb52a2235ff4a4367822541b6099e69e87c89fd51159e18d",
+      "text": "夜晚降临，请所有人闭上眼睛，保持安静。"
+    },
+    "mayor": {
+      "start": 7.514,
+      "end": 13.34,
+      "duration": 5.826,
+      "sha256": "9a5a5742bec4ad8c7dc821a6175aece7d6b5a3c96dc5ee284ec60026b20866f5",
+      "text": "镇长请睁眼，在手机上选择本局的秘密词语。其他人请继续闭眼。"
+    },
+    "mayorClose": {
+      "start": 13.34,
+      "end": 14.472,
+      "duration": 1.132,
+      "sha256": "169d0f8e4057d633dbb4970a59a5456e4ab8c7d76370352016471960b3378262",
+      "text": "镇长请闭眼。"
+    },
+    "seer": {
+      "start": 14.472,
+      "end": 18.942,
+      "duration": 4.47,
+      "sha256": "48ae088c3ca35732b5e8b7534d7955775ab027b5bd6acda93cdead3d65223b50",
+      "text": "先知请睁眼，查看手机上的秘密词语，并记住它。"
+    },
+    "seerClose": {
+      "start": 18.942,
+      "end": 20.093,
+      "duration": 1.151,
+      "sha256": "d06ad0c5c96ca2b88101d72ecbf74b3b3ac427905a5fdd78355f94bb86bffad4",
+      "text": "先知请闭眼。"
+    },
+    "werewolf": {
+      "start": 20.093,
+      "end": 24.93,
+      "duration": 4.837,
+      "sha256": "ca2ab883705112b37cec089ea30f5dbf6e4a726d59abbc6e63685ab5252311a8",
+      "text": "狼人请睁眼，辨认你的同伴，并查看手机上的秘密词语。"
+    },
+    "werewolfClose": {
+      "start": 24.93,
+      "end": 26.212,
+      "duration": 1.282,
+      "sha256": "39703c3e06bb5f52a9f1c140b883c72ee8ce6aecc3323510d3263ada8369e309",
+      "text": "狼人请闭眼。"
+    },
+    "dayIntro": {
+      "start": 26.212,
+      "end": 31.652,
+      "duration": 5.44,
+      "sha256": "e40766ef7bb158399d5f4087b97dd5c7e4e466c37e3c094dbc30b3ec4182e098",
+      "text": "天亮了，所有人请睁眼。现在开始猜词，请向镇长提问。"
+    },
+    "accusation": {
+      "start": 31.652,
+      "end": 37.364,
+      "duration": 5.712,
+      "sha256": "83cf4bbedb23534b52256b40aa37a0d86a6713938e239062b50d2c49cae3b7e2",
+      "text": "秘密词语已经猜中。狼人请亮明身份，你们有十五秒指认先知。"
+    },
+    "discussion": {
+      "start": 37.364,
+      "end": 41.938,
+      "duration": 4.574,
+      "sha256": "150ba08d2f5e0b650a2ede2ca3cc0d64ac4668ae34823261e5630de42bd9ab6a",
+      "text": "未能猜中秘密词语。大家有六十秒讨论，投票找出狼人。"
+    },
+    "verdict": {
+      "start": 41.938,
+      "end": 47.158,
+      "duration": 5.22,
+      "sha256": "b2567e1295b1724050f5e4a7cad8314e4255d36744258fae0db2aaecab5a9067",
+      "text": "时间到，请在线下完成指认或投票，并揭牌确认结果。"
+    },
+    "result": {
+      "start": 47.158,
+      "end": 49.872,
+      "duration": 2.714,
+      "sha256": "70a4a4e49f8de6f16afd4fcb0413f8bc2cbeb2de05399e870138572a0e4fed75",
+      "text": "本局游戏结束。感谢大家参与。"
+    }
+  },
+  "sourceSha256": "2ef9e8358d39295f439dd0e4b7264334c51a0422237fb50f17eaffb1f63f7e27"
 }

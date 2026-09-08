@@ -3,7 +3,7 @@ import narration from "./narration.json";
 export type ClipId = keyof typeof narration;
 type Manifest = { ready: boolean; clips: string[] };
 
-/** Static OpenAI recordings only. A single unlocked AudioContext survives stage changes. */
+/** Static recordings. A single unlocked AudioContext survives stage changes. */
 export class Narrator {
   private context: AudioContext | null = null;
   private buffers = new Map<string, AudioBuffer>();

@@ -16,6 +16,13 @@ const voice = 'marin';
 const instructions = '请用标准普通话播报桌游主持词。声音沉稳、温和、清晰，语速稍慢，句间自然停顿。只读输入的中文内容，不添加任何词语、音效或背景音乐。';
 const metadataPath = resolve(root, 'public/audio/generation.json');
 const manifestPath = resolve(root, 'public/audio/manifest.json');
+try {
+  const activeManifest = JSON.parse(await readFile(manifestPath, 'utf8'));
+  if (activeManifest.provider === 'user-recording' && !args.has('--force')) {
+    console.error('当前使用用户提供的录音。检查请运行 npm run voice:check；只有明确要替换录音时才使用 --force 重新生成。');
+    process.exit(1);
+  }
+} catch (error) { if (error.code !== 'ENOENT') throw error; }
 let metadata = {};
 try { metadata = JSON.parse(await readFile(metadataPath, 'utf8')); }
 catch (error) { if (error.code !== 'ENOENT') throw error; }

@@ -9,7 +9,8 @@
     "preview": "vite preview --host 127.0.0.1",
     "test": "vitest run src",
     "test:e2e": "playwright test",
-    "voice:check": "node scripts/generate-voice.mjs --check",
+    "voice:check": "node scripts/check-voice.mjs",
+    "voice:cut": "python scripts/cut-voice.py",
     "voice:generate": "node scripts/generate-voice.mjs"
   },
   "dependencies": {

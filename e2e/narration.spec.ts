@@ -50,7 +50,7 @@ test("recording lifecycle: narration before timer, automatic night, and skip can
   );
   await page.clock.install();
   await page.goto("/");
-  await expect(page.getByText("OpenAI 模型生成语音")).toBeVisible();
+  await expect(page.getByText("录音播报已就绪")).toBeVisible();
   await page.getByRole("button", { name: "开始夜晚", exact: true }).click();
   await page.clock.runFor(150);
   await expect(page.getByText("语音主持已就绪")).toBeVisible();
@@ -89,6 +89,9 @@ test("recording lifecycle: narration before timer, automatic night, and skip can
 });
 
 test("missing audio does not auto-advance the night", async ({ page }) => {
+  await page.route("**/audio/manifest.json", (route) =>
+    route.fulfill({ json: { ready: false, clips: [] } }),
+  );
   await page.clock.install();
   await page.goto("/");
   await page.getByRole("button", { name: "无声预览流程" }).click();

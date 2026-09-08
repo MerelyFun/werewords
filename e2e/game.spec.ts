@@ -1,5 +1,11 @@
 import { test, expect, type Page } from "@playwright/test";
 
+test.beforeEach(async ({ page }) => {
+  await page.route("**/audio/manifest.json", (route) =>
+    route.fulfill({ json: { ready: false, clips: [] } }),
+  );
+});
+
 async function start(page: Page) {
   await page.goto("/");
   await page.getByRole("button", { name: "无声预览流程" }).click();
@@ -27,13 +33,13 @@ test("mobile setup, honest audio status, settings persist and layout fits", asyn
   page.on("pageerror", (error) => errors.push(error.message));
   await page.goto("/");
   await expect(page).toHaveTitle("狼人真言 · 今夜一起猜");
-  await expect(page.getByText("模型音频待生成", { exact: true })).toBeVisible();
+  await expect(page.getByText("播报音频未就绪", { exact: true })).toBeVisible();
   await page.getByRole("button", { name: "增加游戏人数" }).click();
   await expect(page.getByText("7 人", { exact: true })).toBeVisible();
   await page.reload();
   await expect(page.getByText("7 人", { exact: true })).toBeVisible();
   await page.getByRole("button", { name: "试听", exact: true }).click();
-  await expect(page.locator(".notice")).toContainText("尚未生成");
+  await expect(page.locator(".notice")).toContainText("播报音频未就绪");
   expect(
     await page.evaluate(
       () => document.documentElement.scrollWidth <= innerWidth,

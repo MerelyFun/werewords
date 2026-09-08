@@ -11,5 +11,5 @@
   "discussion": { "text": "未能猜中秘密词语。大家有六十秒讨论，投票找出狼人。", "file": "audio/discussion.mp3" },
   "verdict": { "text": "时间到，请在线下完成指认或投票，并揭牌确认结果。", "file": "audio/verdict.mp3" },
   "result": { "text": "本局游戏结束。感谢大家参与。", "file": "audio/result.mp3" },
-  "test": { "text": "语音准备完毕。请确认所有人都能清楚听见。", "file": "audio/test.mp3" }
+  "test": { "text": "准备完毕。请确认所有人都能清楚听见。", "file": "audio/test.mp3" }
 }

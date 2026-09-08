@@ -337,7 +337,7 @@ export default function App() {
       setVoiceReady(ready);
       if (!ready) {
         setError(
-          "模型音频尚未生成。现在可无声预览流程，正式游戏请等音频就绪。",
+          "播报音频未就绪。现在可无声预览流程，正式游戏请等音频就绪。",
         );
         return;
       }
@@ -497,7 +497,7 @@ export default function App() {
               <div>
                 <span>语音主持</span>
                 <small>
-                  {voiceReady ? "OpenAI 模型生成语音" : "模型音频待生成"}
+                  {voiceReady ? "录音播报已就绪" : "播报音频未就绪"}
                 </small>
               </div>
               <button
@@ -726,9 +726,9 @@ export default function App() {
                           ? "流程已暂停"
                           : voiceReady
                             ? "语音主持已就绪"
-                            : "音频待生成"}
+                            : "播报音频未就绪"}
                     </span>
-                    {voiceReady && <small>AI 生成语音</small>}
+                    {voiceReady && <small>预录主持语音</small>}
                   </div>
                   {voiceReady && stage in narration && (
                     <button
@@ -830,7 +830,7 @@ export default function App() {
               每个阶段都可以跳过。夜晚自动推进会等播报结束再开始计时；切到后台将暂停夜晚并遮住词语。
             </p>
             <p>
-              模型录音未生成时，仅提供无声预览。正式开局前请试听并调高手机音量。
+              播报音频未就绪时，仅提供无声预览。正式开局前请试听并调高手机音量。
             </p>
             <button className="primary" onClick={() => setHelp(false)}>
               知道了

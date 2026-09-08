@@ -49,7 +49,7 @@ afterEach(() => {
   vi.unstubAllEnvs();
 });
 
-describe("静态模型录音 Narrator", () => {
+describe("静态录音 Narrator", () => {
   it("仅在就绪标记与完整片段清单同时成立时报告就绪", async () => {
     const narrator = new Narrator();
     for (const manifest of [

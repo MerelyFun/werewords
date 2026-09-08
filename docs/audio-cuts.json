@@ -1,0 +1,20 @@
+{
+  "source": "assets/audio/host-source.mp3",
+  "sourceSha256": "2ef9e8358d39295f439dd0e4b7264334c51a0422237fb50f17eaffb1f63f7e27",
+  "sourceDuration": 49.872,
+  "clips": {
+    "test": { "start": 0, "end": 3.529 },
+    "nightIntro": { "start": 3.529, "end": 7.514 },
+    "mayor": { "start": 7.514, "end": 13.340 },
+    "mayorClose": { "start": 13.340, "end": 14.472 },
+    "seer": { "start": 14.472, "end": 18.942 },
+    "seerClose": { "start": 18.942, "end": 20.093 },
+    "werewolf": { "start": 20.093, "end": 24.930 },
+    "werewolfClose": { "start": 24.930, "end": 26.212 },
+    "dayIntro": { "start": 26.212, "end": 31.652 },
+    "accusation": { "start": 31.652, "end": 37.364 },
+    "discussion": { "start": 37.364, "end": 41.938 },
+    "verdict": { "start": 41.938, "end": 47.158 },
+    "result": { "start": 47.158, "end": 49.872 }
+  }
+}
