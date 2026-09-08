@@ -393,8 +393,8 @@ export default function App() {
     : stage.startsWith("werewolf") || nightStep?.roleId === "minion" || stage === "discussion" || state.winner === "werewolves" ? "werewolf" : "villager";
   const shownWord = revealsWord ? (concealed ? "已遮挡" : state.secret?.text) : stage === "result" ? state.secret?.text : undefined;
   return (
-    <div className={`app-shell ${active ? "is-playing" : ""}`}>
-      <header>
+    <div className={`app-shell ${active ? "is-playing" : ""} ${revealsWord ? "is-reading" : ""} ${stage === "mayor" ? "is-choosing" : ""}`}>
+      {!revealsWord && <header>
         <a
           href="./"
           onClick={(e) => {
@@ -409,7 +409,7 @@ export default function App() {
         <button className="pill" onClick={() => setHelp(true)}>
           玩法
         </button>
-      </header>
+      </header>}
       <main>
         {stage === "setup" ? (
           <>
@@ -519,14 +519,13 @@ export default function App() {
           </>
         ) : (
           <>
-            <TablePrompt title={title} description={description} art={art}
+            {stage !== "mayor" && <TablePrompt wordOnly={revealsWord} title={title} description={description} art={art}
               word={shownWord} timer={state.remaining > 0 ? (speaking ? "…" : timeText) : undefined}
-              response={stage === "day" ? response : undefined}
-              candidates={stage === "mayor" ? state.candidates.map(w => concealed ? "已遮挡" : w.text) : undefined} />
-            <section className="stage-heading" aria-live="polite">
+              response={stage === "day" ? response : undefined} />}
+            {revealsWord ? <h1 className="sr-only">{title}</h1> : <section className="stage-heading" aria-live="polite">
               <RoleArt kind={art} />
               <div><h1>{title}</h1><p>{description}</p></div>
-            </section>
+            </section>}
             {stage === "mayor" ? (
               <section className="mayor-panel">
                 <div className="word-options">
@@ -567,12 +566,6 @@ export default function App() {
                     ? "已遮挡"
                     : state.secret?.text}
                 </strong>
-                <span className="timer-label">
-                  {paused ? "继续后重新播报提示" : "看词倒计时"}
-                </span>
-                <span className="small-timer">
-                  {state.remaining.toString().padStart(2, "0")}
-                </span>
               </section>
             ) : stage === "day" ? (
               <section className="day-panel">
@@ -700,17 +693,18 @@ export default function App() {
                     onClick={() => { narrator.stop(); setReplay(n => n + 1); }}><RotateCcw size={18} /></button>}
                   <button
                     className="secondary"
+                    aria-label={paused ? "继续" : "暂停"}
                     onClick={() => void togglePause()}
                   >
                     {paused ? <Play size={17} /> : <Pause size={17} />}
-                    {paused ? "继续" : "暂停"}
+                    {!revealsWord && (paused ? "继续" : "暂停")}
                   </button>
-                  <button className="secondary skip" onClick={skip}>
-                    跳过此阶段
+                  <button className="secondary skip" aria-label="跳过此阶段" onClick={skip}>
+                    {!revealsWord && "跳过此阶段"}
                     <ArrowRight size={18} />
                   </button>
                 </div>
-                {isNight && !roundVoiceReady && stage !== "mayor" && (
+                {isNight && !revealsWord && !roundVoiceReady && stage !== "mayor" && (
                   <button
                     className="text-button"
                     onClick={() => act({ type: "NEXT" })}
@@ -729,9 +723,10 @@ export default function App() {
             )}
             <button
               className="reset-link"
+              aria-label="结束本局"
               onClick={() => setConfirmReset(true)}
             >
-              结束本局
+              {revealsWord ? <X size={18} /> : "结束本局"}
             </button>
           </>
         )}

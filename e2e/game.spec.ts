@@ -67,7 +67,7 @@ test("every stage can be skipped, including unknown verdict and restart", async 
   ).toBeVisible();
 });
 
-test("selected word is revealed at night and concealed during pause and day", async ({
+test("seer and werewolf see only large two-direction words, concealed during pause and day", async ({
   page,
 }) => {
   await start(page);
@@ -78,15 +78,30 @@ test("selected word is revealed at night and concealed during pause and day", as
   await page.getByRole("button", { name: "记住了，进入下一阶段" }).click();
   await expect(page.getByText(word, { exact: true })).toHaveCount(0);
   await page.getByRole("button", { name: "跳过此阶段" }).click();
-  await expect(page.locator(".secret-panel strong")).toHaveText(word);
-  await expect(page.locator(".opposite-word")).toHaveText(word);
-  await page.getByRole("button", { name: "暂停", exact: true }).click();
-  await expect(page.locator(".secret-panel strong")).toHaveText("已遮挡");
-  await expect(page.locator(".opposite-word")).toHaveText("已遮挡");
-  await expect(page.getByText(word, { exact: true })).toHaveCount(0);
-  await page.getByRole("button", { name: "继续", exact: true }).click();
-  await expect(page.locator(".secret-panel strong")).toHaveText(word);
-  await expect(page.locator(".opposite-word")).toHaveText(word);
+  for (const role of ["先知", "狼人"]) {
+    await expect(page.getByRole("heading", { name: `${role}，请睁眼` })).toHaveCount(1);
+    await expect(page.locator(".secret-panel")).toHaveText(word);
+    await expect(page.locator(".opposite-face")).toHaveText(word);
+    await expect(page.locator(".opposite-title, .opposite-description, .opposite-timer, .secret-panel .timer-label, .secret-panel .small-timer")).toHaveCount(0);
+    for (const selector of [".secret-panel strong", ".opposite-word"]) {
+      const fontSize = await page.locator(selector).evaluate(element => parseFloat(getComputedStyle(element).fontSize));
+      expect(fontSize).toBeGreaterThanOrEqual(48);
+    }
+    expect(await page.locator(".opposite-face").evaluate(element => getComputedStyle(element).transform)).toBe("matrix(-1, 0, 0, -1, 0, 0)");
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    await page.getByRole("button", { name: "暂停", exact: true }).click();
+    await expect(page.locator(".secret-panel strong")).toHaveText("已遮挡");
+    await expect(page.locator(".opposite-word")).toHaveText("已遮挡");
+    await expect(page.getByText(word, { exact: true })).toHaveCount(0);
+    await page.getByRole("button", { name: "继续", exact: true }).click();
+    await expect(page.locator(".secret-panel strong")).toHaveText(word);
+    await expect(page.locator(".opposite-word")).toHaveText(word);
+    if (role === "先知") {
+      await page.getByRole("button", { name: "跳过此阶段" }).click();
+      await expect(page.getByText(word, { exact: true })).toHaveCount(0);
+      await page.getByRole("button", { name: "跳过此阶段" }).click();
+    }
+  }
   await skipToDay(page);
   await expect(page.getByText(word, { exact: true })).toHaveCount(0);
   await expect(page.locator("body")).not.toContainText("玩家名单");

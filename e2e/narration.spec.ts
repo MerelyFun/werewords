@@ -73,8 +73,10 @@ test("recording lifecycle: narration before timer, automatic night, and skip can
     page.getByRole("heading", { name: "先知，请睁眼" }),
   ).toBeVisible();
   await page.clock.runFor(150);
-  await expect(page.locator(".small-timer")).toHaveText("08");
-  await page.clock.fastForward(8_100);
+  await expect(page.locator(".small-timer")).toHaveCount(0);
+  await page.clock.fastForward(7_000);
+  await expect(page.getByRole("heading", { name: "先知，请睁眼" })).toHaveCount(1);
+  await page.clock.fastForward(1_100);
   await expect(
     page.getByRole("heading", { name: "先知，请闭眼" }),
   ).toBeVisible();

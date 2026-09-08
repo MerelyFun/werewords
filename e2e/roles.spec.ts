@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import narration from "../src/narration.json" with { type: "json" };
 
-test("opposite seats see rotated prompts and both candidate faces are concealed", async ({ page }) => {
+test("opposite seats see rotated prompts but mayor candidates stay single-direction and concealed on pause", async ({ page }) => {
   await page.route("**/audio/manifest.json", route => route.fulfill({ json: { ready: false, clips: [] } }));
   await page.goto("/");
   await page.getByRole("button", { name: "无声预览流程" }).click();
@@ -10,9 +10,11 @@ test("opposite seats see rotated prompts and both candidate faces are concealed"
   expect(transform).toBe("matrix(-1, 0, 0, -1, 0, 0)");
   await page.getByRole("button", { name: "跳过此阶段" }).click();
   const candidates = await page.locator(".word-options button").allTextContents();
-  await expect(page.locator(".opposite-options span")).toHaveText(candidates);
+  await expect(page.locator(".opposite-face")).toHaveCount(0);
+  expect(candidates).toHaveLength(3);
+  for (const candidate of candidates) await expect(page.getByText(candidate, { exact: true })).toHaveCount(1);
   await page.getByRole("button", { name: "暂停", exact: true }).click();
-  await expect(page.locator(".opposite-options span")).toHaveText(["已遮挡", "已遮挡", "已遮挡"]);
+  await expect(page.locator(".opposite-face")).toHaveCount(0);
   await expect(page.locator(".word-options button")).toHaveText(["已遮挡", "已遮挡", "已遮挡"]);
   for (const candidate of candidates) await expect(page.getByText(candidate, { exact: true })).toHaveCount(0);
 });
