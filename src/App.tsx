@@ -445,6 +445,15 @@ export default function App() {
               />
               <details className="advanced-settings"><summary>更多设置 <span>⌄</span></summary>
               <Stepper
+                label="镇长候选词数"
+                value={`${state.settings.candidateCount} 个`}
+                count={state.settings.candidateCount}
+                min={2}
+                max={6}
+                onMinus={() => setting({ candidateCount: state.settings.candidateCount - 1 })}
+                onPlus={() => setting({ candidateCount: state.settings.candidateCount + 1 })}
+              />
+              <Stepper
                 label="看词时间"
                 value={`${state.settings.nightSeconds} 秒`}
                 count={state.settings.nightSeconds}

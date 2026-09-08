@@ -22,6 +22,7 @@ export interface Settings {
   daySeconds: number;
   nightSeconds: number;
   closeSeconds: number;
+  candidateCount: number;
   roles: Record<string, number>;
   difficulty: PlayDifficulty;
   libraryIds: string[];
@@ -32,6 +33,7 @@ export const defaultSettings: Settings = {
   daySeconds: 240,
   nightSeconds: 8,
   closeSeconds: 4,
+  candidateCount: 3,
   roles: normalizeRoles(undefined, 6),
   difficulty: "all",
   libraryIds: ["builtin"],
@@ -107,7 +109,7 @@ function enter(state: GameState, stage: Stage): GameState {
 function start(state: GameState, candidates?: Word[]): GameState {
   const selection = candidates?.length
     ? candidates
-    : pickLibraryWords("all", state.settings.libraryIds);
+    : pickLibraryWords("all", state.settings.libraryIds, state.settings.candidateCount);
   return enter(
     {
       ...initialState,
@@ -166,6 +168,7 @@ export function reducer(state: GameState, action: Action): GameState {
       const difficulty = "all";
       const settings: Settings = {
         players,
+        candidateCount: clamp(input.candidateCount, 2, 6, defaultSettings.candidateCount),
         roles: normalizeRoles(input.roles, players),
         closeSeconds: clamp(input.closeSeconds, 1, 15, defaultSettings.closeSeconds),
         daySeconds: clamp(
