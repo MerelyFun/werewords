@@ -2,7 +2,6 @@ import { useEffect, useReducer, useRef, useState, type SVGProps } from "react";
 import {
   ArrowRight,
   Check,
-  ChevronDown,
   EyeOff,
   Minus,
   Pause,
@@ -24,8 +23,9 @@ import { Narrator, type ClipId } from "./audio";
 import narration from "./narration.json";
 import { RoleArt, type ArtKind } from "./RoleArt";
 import { TablePrompt } from "./TablePrompt";
-import { findNightStep, getNightSteps } from "./roles";
+import { findNightStep, getNightSteps, roleCatalog } from "./roles";
 import { RoleSettings } from "./RoleSettings";
+import { WordSettings } from "./WordSettings";
 
 const narrator = new Narrator();
 const storedSettings = (): Settings => {
@@ -388,9 +388,10 @@ export default function App() {
 
   const title = stage === "result" ? resultTitle : nightStep?.title ?? titles[stage] ?? "夜晚";
   const description = nightStep?.description ?? descriptions[stage] ?? "";
-  const art: ArtKind = stage.startsWith("mayor") ? "mayor"
+  const roleArt = roleCatalog.find(role => role.id === nightStep?.roleId)?.art;
+  const art: ArtKind = roleArt ?? (stage.startsWith("mayor") ? "mayor"
     : stage.startsWith("seer") || nightStep?.roleId === "beholder" ? "seer"
-    : stage.startsWith("werewolf") || nightStep?.roleId === "minion" || stage === "discussion" || state.winner === "werewolves" ? "werewolf" : "villager";
+    : stage.startsWith("werewolf") || nightStep?.roleId === "minion" || stage === "discussion" || state.winner === "werewolves" ? "werewolf" : "villager");
   const shownWord = revealsWord ? (concealed ? "已遮挡" : state.secret?.text) : stage === "result" ? state.secret?.text : undefined;
   return (
     <div className={`app-shell ${active ? "is-playing" : ""} ${revealsWord ? "is-reading" : ""} ${stage === "mayor" ? "is-choosing" : ""}`}>
@@ -413,7 +414,8 @@ export default function App() {
       <main>
         {stage === "setup" ? (
           <>
-            <section className="intro">
+            <section className="intro cover-hero">
+              <img src={`${import.meta.env.BASE_URL}images/cover.png`} alt="月光下的森林与村庄" fetchPriority="high" />
               <h1>今夜，谁在说谎？</h1>
             </section>
             <section className="settings" aria-label="开局设置">
@@ -456,45 +458,8 @@ export default function App() {
                 count={state.settings.closeSeconds} min={1} max={15}
                 onMinus={() => setting({ closeSeconds: state.settings.closeSeconds - 1 })}
                 onPlus={() => setting({ closeSeconds: state.settings.closeSeconds + 1 })} />
-              <label className="setting-row">
-                <span>词库</span>
-                <span className="select-wrap">
-                  <select
-                    value={state.settings.category}
-                    onChange={(e) =>
-                      setting({
-                        category: e.target.value as Settings["category"],
-                      })
-                    }
-                  >
-                    <option value="all">全部词库</option>
-                    {["日常", "自然", "饮食", "趣味"].map((c) => (
-                      <option key={c} value={c}>
-                        {c === "日常" ? "日常生活" : c}
-                      </option>
-                    ))}
-                  </select>
-                  <ChevronDown size={16} />
-                </span>
-              </label>
-              <label className="setting-row">
-                <span>难度</span>
-                <span className="select-wrap">
-                  <select
-                    value={state.settings.difficulty}
-                    onChange={(e) =>
-                      setting({
-                        difficulty: e.target.value as Settings["difficulty"],
-                      })
-                    }
-                  >
-                    <option value="easy">标准</option>
-                    <option value="hard">挑战</option>
-                  </select>
-                  <ChevronDown size={16} />
-                </span>
-              </label>
             </section>
+            <WordSettings difficulty={state.settings.difficulty} category={state.settings.category} onChange={setting} />
             <RoleSettings players={state.settings.players} counts={state.settings.roles}
               onChange={(roles) => setting({ roles })} />
             <button className="text-button audition" disabled={loading} onClick={() => void testVoice()}>

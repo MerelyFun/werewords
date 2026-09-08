@@ -44,3 +44,7 @@
 ## 2026-09-09 发布授权
 
 用户明确要求部署到 GitHub 并公开访问。使用已登录账号 MerelyFun，新建公开仓库 werewords；origin=https://github.com/MerelyFun/werewords.git，Pages目标 https://merelyfun.github.io/werewords/。已启用 GitHub Actions 发布来源和 HTTPS。
+
+## 2026-09-09 封面和词库要求
+
+用户要求高质感图片封面、配置角色配图片、词库按难度选。外部词库必须先调查让用户选择，再导入；本轮保持原有128词不变，候选为日常聚会/动漫游戏与老梗/成语挑战。
