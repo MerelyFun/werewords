@@ -50,11 +50,11 @@ test("recording lifecycle: narration before timer, automatic night, and skip can
   );
   await page.clock.install();
   await page.goto("/");
-  await expect(page.getByText("录音播报已就绪")).toBeVisible();
+  await expect(page.getByRole("button", { name: "开始夜晚", exact: true })).toBeEnabled();
   await page.getByRole("button", { name: "开始夜晚", exact: true }).click();
   await page.clock.runFor(150);
-  await expect(page.getByText("语音主持已就绪")).toBeVisible();
-  await page.clock.fastForward(8_100);
+  await expect(page.locator(".small-timer")).toHaveText("04");
+  await page.clock.fastForward(4_100);
   await expect(
     page.getByRole("heading", { name: "镇长，请睁眼" }),
   ).toBeVisible();
@@ -99,5 +99,5 @@ test("missing audio does not auto-advance the night", async ({ page }) => {
   await expect(
     page.getByRole("heading", { name: "天黑，请闭眼" }),
   ).toBeVisible();
-  await expect(page.getByText("无声预览 · 夜晚请手动继续")).toBeVisible();
+  await expect(page.getByRole("button", { name: "手动继续", exact: true })).toBeVisible();
 });

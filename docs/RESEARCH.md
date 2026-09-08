@@ -36,3 +36,25 @@ GitHub Pages 托管静态 HTML、CSS、JavaScript，因此线下辅助版可直�
 项目站点默认带仓库路径，后续必须验证静态资源路径。建议使用 GitHub Actions 构建后发布 dist；发布前需要仓库权限和 Pages 配置。GitHub Free 支持公开仓库的 Pages，私有仓库须核对套餐。
 
 来源：[Pages 介绍](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)、[自定义发布工作流](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)、[设置发布来源](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages)。
+
+## 2026-09-08：可配置扩展角色调查
+
+本次核对[官方豪华版规则（ver=3）](https://werewords.com/rules.php?ver=3)，并以[初版奖励角色说明](https://werewords.com/rules.php?ver=1)核对“不看词”的限制。下列中文角色名为项目译名，附英文便于与实体卡核对，不声称属于用户所持中文版。普通狼人杀的女巫、猎人不在这份角色规则中。
+
+| 角色 | 官方行为摘要 | 网页实现约束 |
+| --- | --- | --- |
+| 观察者（Beholder） | 村民阵营，知道先知是谁，但不看秘密词语；被狼人指中不算找到先知。 | 独立认人阶段，绝不显示词语。 |
+| 爪牙（Minion） | 狼人阵营，认狼人但不看词；猜中后不参加狼人指认；未猜中时投中爪牙也算村民胜；爪牙镇长可说谎。 | 独立认人阶段；投票结果需涵盖爪牙。 |
+| 共济会成员（Mason） | 村民阵营，夜晚互认；无模仿者且只有一名时不唤醒。 | 建议成对配置，阶段不显示词语。 |
+| 怪物（Thing） | 村民阵营，夜晚轻碰一名相邻玩家靠近自己的肩膀。 | 单独行动阶段，不显示词语。 |
+
+爪牙结算另见[出版方维护的 Dized 规则](https://rules.dized.com/game/lt3bmW-WSx6c2iP_IOWJKw/miVwMeJ5TiOATyuXuDQXoQ/role-minion)。不能照搬其他狼人游戏中“投中爪牙村民输”的规则。
+
+豪华版还包含学徒（镇长为先知／占卜师时接替）、占卜师（仅看单词开头字母）、模仿者（查看实体卡后复制角色）。这些角色分别涉及镇长身份分支、中文部分词提示改编、复制状态及胜负目标改变，不能仅添加名称后宣称完整支持。本轮建议优先实现上表四种；其余仍作为后续扩展，不混入已支持角色。
+
+### 本项目的适配决定与音频边界
+
+- 用户选择的是本局使用的实体卡角色组合，不是玩家身份分配。镇长仍为附加公开职责；网站不登记任何“谁是什么角色”。
+- 认人阶段可以让被辨认者保持闭眼并举拇指，再由观察者／爪牙睁眼辨认。这是共享手机的明确网页引导方案，不声称为上述规则页逐字指定的动作。结束需提示收手、闭眼，且屏幕始终隐藏秘密词语。
+- 用户已有的 13 段录音仅覆盖基础角色。扩展角色必须使用对应的新播报；不可将“先知请睁眼”或“狼人请睁眼”代用于其他角色，亦不可让无音频的认人阶段自动无声推进。
+- 豪华版允许 4–20 人标准局，7–11 人建议两狼、12 人以上三狼；官方要求至少一狼以及先知或占卜师。网站当前支持范围应依据实际已实现角色与流程标注，不能仅放宽人数就声称支持完整豪华版。

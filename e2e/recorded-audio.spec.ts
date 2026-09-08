@@ -84,7 +84,7 @@ test("real recording preview finishes and skipping cancels the native night sour
   });
   const trace = () => page.evaluate(() => (window as AudioTraceWindow).recordedAudioTrace);
   await page.goto("/");
-  await expect(page.getByText("录音播报已就绪", { exact: true })).toBeVisible();
+  await expect(page.getByRole("button", { name: "开始夜晚", exact: true })).toBeEnabled();
   await page.getByRole("button", { name: "试听", exact: true }).click();
   await expect.poll(trace).toContainEqual({ action: "start", id: 1 });
   await expect.poll(trace, { timeout: 60_000 }).toContainEqual({ action: "ended", id: 1 });

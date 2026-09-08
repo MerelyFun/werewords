@@ -26,18 +26,20 @@ async function skipToDay(page: Page) {
   ).toBeVisible();
 }
 
-test("mobile setup, honest audio status, settings persist and layout fits", async ({
+test("mobile setup stays minimal, settings persist and layout fits", async ({
   page,
 }) => {
   const errors: string[] = [];
   page.on("pageerror", (error) => errors.push(error.message));
   await page.goto("/");
   await expect(page).toHaveTitle("狼人真言 · 今夜一起猜");
-  await expect(page.getByText("播报音频未就绪", { exact: true })).toBeVisible();
+  await expect(page.getByText("播报音频未就绪", { exact: true })).toHaveCount(0);
+  await expect(page.getByText("语音主持已就绪")).toHaveCount(0);
+  await expect(page.getByRole("button", { name: "无声预览流程" })).toBeEnabled();
   await page.getByRole("button", { name: "增加游戏人数" }).click();
-  await expect(page.getByText("7 人", { exact: true })).toBeVisible();
+  await expect(page.locator(".setting-row").filter({ hasText: "游戏人数" }).locator("output")).toHaveText("7 人");
   await page.reload();
-  await expect(page.getByText("7 人", { exact: true })).toBeVisible();
+  await expect(page.locator(".setting-row").filter({ hasText: "游戏人数" }).locator("output")).toHaveText("7 人");
   await page.getByRole("button", { name: "试听", exact: true }).click();
   await expect(page.locator(".notice")).toContainText("播报音频未就绪");
   expect(
@@ -77,10 +79,14 @@ test("selected word is revealed at night and concealed during pause and day", as
   await expect(page.getByText(word, { exact: true })).toHaveCount(0);
   await page.getByRole("button", { name: "跳过此阶段" }).click();
   await expect(page.locator(".secret-panel strong")).toHaveText(word);
+  await expect(page.locator(".opposite-word")).toHaveText(word);
   await page.getByRole("button", { name: "暂停", exact: true }).click();
   await expect(page.locator(".secret-panel strong")).toHaveText("已遮挡");
+  await expect(page.locator(".opposite-word")).toHaveText("已遮挡");
+  await expect(page.getByText(word, { exact: true })).toHaveCount(0);
   await page.getByRole("button", { name: "继续", exact: true }).click();
   await expect(page.locator(".secret-panel strong")).toHaveText(word);
+  await expect(page.locator(".opposite-word")).toHaveText(word);
   await skipToDay(page);
   await expect(page.getByText(word, { exact: true })).toHaveCount(0);
   await expect(page.locator("body")).not.toContainText("玩家名单");

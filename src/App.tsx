@@ -10,8 +10,6 @@ import {
   Plus,
   RotateCcw,
   SkipForward,
-  Sun,
-  Volume2,
   X,
 } from "lucide-react";
 import {
@@ -24,6 +22,10 @@ import {
 } from "./game";
 import { Narrator, type ClipId } from "./audio";
 import narration from "./narration.json";
+import { RoleArt, type ArtKind } from "./RoleArt";
+import { TablePrompt } from "./TablePrompt";
+import { findNightStep, getNightSteps } from "./roles";
+import { RoleSettings } from "./RoleSettings";
 
 const narrator = new Narrator();
 const storedSettings = (): Settings => {
@@ -37,7 +39,7 @@ const storedSettings = (): Settings => {
     return initialState.settings;
   }
 };
-const titles: Record<Stage, string> = {
+const titles: Partial<Record<Stage, string>> = {
   setup: "今夜，谁在说谎？",
   nightIntro: "天黑，请闭眼",
   mayor: "镇长，请睁眼",
@@ -53,7 +55,7 @@ const titles: Record<Stage, string> = {
   verdict: "揭晓这一局",
   result: "今夜，已有答案",
 };
-const descriptions: Record<Stage, string> = {
+const descriptions: Partial<Record<Stage, string>> = {
   setup: "",
   nightIntro: "把手机放在桌上，跟随声音进入夜晚。",
   mayor: "请从三个候选中选出本局真言。",
@@ -150,6 +152,8 @@ export default function App() {
   const remaining = useRef(state.remaining);
   const deadline = useRef<number | null>(null);
   const stage = state.stage;
+  const missingRoleAudio = getNightSteps(state.settings.roles).some(step => !(step.id in narration));
+  const roundVoiceReady = voiceReady && !missingRoleAudio;
   const isNight = ![
     "setup",
     "day",
@@ -158,7 +162,7 @@ export default function App() {
     "verdict",
     "result",
   ].includes(stage);
-  const group = isNight ? 0 : stage === "day" ? 1 : 2;
+  const nightStep = findNightStep(stage);
   const active = stage !== "setup";
   remaining.current = state.remaining;
 
@@ -223,10 +227,10 @@ export default function App() {
     const beginTimer = () => {
       if (cancelled) return;
       setSpeaking(false);
-      if (duration > 0 && (!isNight || voiceReady))
+      if (duration > 0 && (!isNight || roundVoiceReady))
         deadline.current = Date.now() + remaining.current * 1000;
     };
-    if (voiceReady && stage in narration) {
+    if (roundVoiceReady && stage in narration) {
       setSpeaking(true);
       void narrator
         .play(stage as ClipId)
@@ -249,7 +253,7 @@ export default function App() {
     help,
     confirmReset,
     replay,
-    voiceReady,
+    roundVoiceReady,
     active,
     isNight,
     state.settings,
@@ -320,7 +324,7 @@ export default function App() {
     setError("");
     setLoading(true);
     try {
-      if (voiceReady) await narrator.prepare();
+      if (roundVoiceReady) await narrator.prepare();
       setSelectedWord(null);
       act({ type: "START" });
     } catch (e) {
@@ -354,7 +358,7 @@ export default function App() {
   const togglePause = async () => {
     narrator.stop();
     deadline.current = null;
-    if (paused && voiceReady) {
+    if (paused && roundVoiceReady) {
       try {
         await narrator.prepare();
       } catch (e) {
@@ -373,7 +377,8 @@ export default function App() {
   const timeText = `${Math.floor(state.remaining / 60)
     .toString()
     .padStart(2, "0")}:${(state.remaining % 60).toString().padStart(2, "0")}`;
-  const revealsWord = ["seer", "werewolf"].includes(stage);
+  const revealsWord = nightStep?.revealSecret ?? false;
+  const concealed = paused || help || confirmReset;
   const resultTitle =
     state.winner === "villagers"
       ? "村民阵营获胜"
@@ -381,8 +386,14 @@ export default function App() {
         ? "狼人阵营获胜"
         : "本局已结束";
 
+  const title = stage === "result" ? resultTitle : nightStep?.title ?? titles[stage] ?? "夜晚";
+  const description = nightStep?.description ?? descriptions[stage] ?? "";
+  const art: ArtKind = stage.startsWith("mayor") ? "mayor"
+    : stage.startsWith("seer") || nightStep?.roleId === "beholder" ? "seer"
+    : stage.startsWith("werewolf") || nightStep?.roleId === "minion" || stage === "discussion" || state.winner === "werewolves" ? "werewolf" : "villager";
+  const shownWord = revealsWord ? (concealed ? "已遮挡" : state.secret?.text) : stage === "result" ? state.secret?.text : undefined;
   return (
-    <div className="app-shell">
+    <div className={`app-shell ${active ? "is-playing" : ""}`}>
       <header>
         <a
           href="./"
@@ -403,19 +414,7 @@ export default function App() {
         {stage === "setup" ? (
           <>
             <section className="intro">
-              <Crescent
-                className="hero-moon"
-                size={58}
-                fill="currentColor"
-                strokeWidth={1}
-              />
               <h1>今夜，谁在说谎？</h1>
-              <p>一部手机，一桌朋友，一句隐藏的真言。</p>
-              <div className="byline">
-                <span />
-                实体身份卡 · 语音主持
-                <span />
-              </div>
             </section>
             <section className="settings" aria-label="开局设置">
               <Stepper
@@ -453,6 +452,10 @@ export default function App() {
                   setting({ nightSeconds: state.settings.nightSeconds + 2 })
                 }
               />
+              <Stepper label="闭眼等待" value={`${state.settings.closeSeconds} 秒`}
+                count={state.settings.closeSeconds} min={1} max={15}
+                onMinus={() => setting({ closeSeconds: state.settings.closeSeconds - 1 })}
+                onPlus={() => setting({ closeSeconds: state.settings.closeSeconds + 1 })} />
               <label className="setting-row">
                 <span>词库</span>
                 <span className="select-wrap">
@@ -492,66 +495,37 @@ export default function App() {
                 </span>
               </label>
             </section>
-            <div className="voice-bar">
-              <Volume2 size={22} />
-              <div>
-                <span>语音主持</span>
-                <small>
-                  {voiceReady ? "录音播报已就绪" : "播报音频未就绪"}
-                </small>
-              </div>
-              <button
-                className="pill"
-                disabled={loading}
-                onClick={() => void testVoice()}
-              >
-                {loading ? "加载中" : "试听"}
-                <Play size={12} fill="currentColor" />
-              </button>
-            </div>
+            <RoleSettings players={state.settings.players} counts={state.settings.roles}
+              onChange={(roles) => setting({ roles })} />
+            <button className="text-button audition" disabled={loading} onClick={() => void testVoice()}>
+              <Play size={14} />{loading ? "播放中" : "试听"}
+            </button>
             {error && (
               <p className="notice" role="status">
                 {error}
               </p>
             )}
+            {missingRoleAudio && <p className="role-note">扩展角色配音稍后补充，当前可手动预演。</p>}
             <button
               className="primary start"
               disabled={loading}
               onClick={() => void start()}
             >
-              {voiceReady ? "开始夜晚" : "无声预览流程"}
+              {missingRoleAudio ? "预演所选角色" : voiceReady ? "开始夜晚" : "无声预览流程"}
               <ArrowRight size={23} />
             </button>
-            <button
-              className="skip-setup"
-              disabled={loading}
-              onClick={() => void start()}
-            >
-              跳过设置，直接开始 <SkipForward size={13} />
-            </button>
-            <p className="footer-note">每个阶段均可跳过</p>
+
+
           </>
         ) : (
           <>
-            <nav className="progress" aria-label="游戏进度">
-              {["夜晚", "猜词", "结算"].map((label, index) => (
-                <div key={label} className={group >= index ? "current" : ""}>
-                  <span>{group > index ? <Check size={12} /> : ""}</span>
-                  {label}
-                </div>
-              ))}
-            </nav>
-            {!voiceReady && (
-              <p className="preview-note">无声预览 · 夜晚请手动继续</p>
-            )}
+            <TablePrompt title={title} description={description} art={art}
+              word={shownWord} timer={state.remaining > 0 ? (speaking ? "…" : timeText) : undefined}
+              response={stage === "day" ? response : undefined}
+              candidates={stage === "mayor" ? state.candidates.map(w => concealed ? "已遮挡" : w.text) : undefined} />
             <section className="stage-heading" aria-live="polite">
-              {group === 1 ? (
-                <Sun size={36} />
-              ) : (
-                <Crescent size={36} fill="currentColor" />
-              )}
-              <h1>{stage === "result" ? resultTitle : titles[stage]}</h1>
-              <p>{descriptions[stage]}</p>
+              <RoleArt kind={art} />
+              <div><h1>{title}</h1><p>{description}</p></div>
             </section>
             {stage === "mayor" ? (
               <section className="mayor-panel">
@@ -570,7 +544,7 @@ export default function App() {
                   ))}
                 </div>
                 <small>
-                  选词后请记住答案再继续。跳过会采用第一个候选。先知或狼人镇长按实体卡参与后续阶段。
+                  记住再继续；跳过默认选第一个。
                 </small>
                 <button
                   className="primary"
@@ -624,7 +598,7 @@ export default function App() {
                 <p className="answer-hint">
                   {response
                     ? `镇长回答：${response}`
-                    : "可点击展示回答，或使用桌上的标记。"}
+                    : ""}
                 </p>
                 <button
                   className="primary"
@@ -659,12 +633,12 @@ export default function App() {
             ) : stage === "verdict" ? (
               <section className="verdict-panel">
                 <h2>
-                  {state.guessed ? "狼人找到先知了吗？" : "村民找到狼人了吗？"}
+                  {state.guessed ? "狼人找到先知了吗？" : state.settings.roles.minion ? "找到狼人或爪牙了吗？" : "村民找到狼人了吗？"}
                 </h2>
                 <p>
                   {state.guessed
                     ? "多只狼人中，只要有一只指认正确，就算找到。"
-                    : "最高票并列者中有狼人即找到；人人各一票则未找到。"}
+                    : state.settings.roles.minion ? "最高票中有狼人或爪牙即找到；人人各一票则未找到。" : "最高票并列者中有狼人即找到；人人各一票则未找到。"}
                 </p>
                 <button
                   className="primary"
@@ -707,7 +681,7 @@ export default function App() {
                 <p>
                   {stage === "dayIntro"
                     ? "准备开始猜词"
-                    : "保持闭眼，听从语音引导"}
+                    : nightStep ? nightStep.description : "请闭眼"}
                 </p>
                 <span className="small-timer">
                   {state.remaining.toString().padStart(2, "0")}
@@ -716,39 +690,14 @@ export default function App() {
             )}
             {active && stage !== "result" && (
               <>
-                <div className="voice-bar">
-                  <Volume2 size={21} />
-                  <div className="voice-status">
-                    <span>
-                      {speaking
-                        ? "语音播报中…"
-                        : paused
-                          ? "流程已暂停"
-                          : voiceReady
-                            ? "语音主持已就绪"
-                            : "播报音频未就绪"}
-                    </span>
-                    {voiceReady && <small>预录主持语音</small>}
-                  </div>
-                  {voiceReady && stage in narration && (
-                    <button
-                      className="icon-button"
-                      aria-label="重播本阶段语音"
-                      onClick={() => {
-                        narrator.stop();
-                        setReplay((n) => n + 1);
-                      }}
-                    >
-                      <RotateCcw size={18} />
-                    </button>
-                  )}
-                </div>
                 {error && (
                   <p className="notice" role="alert">
                     {error}
                   </p>
                 )}
                 <div className="stage-controls">
+                  {roundVoiceReady && stage in narration && <button className="icon-button" aria-label="重播本阶段语音"
+                    onClick={() => { narrator.stop(); setReplay(n => n + 1); }}><RotateCcw size={18} /></button>}
                   <button
                     className="secondary"
                     onClick={() => void togglePause()}
@@ -761,7 +710,7 @@ export default function App() {
                     <ArrowRight size={18} />
                   </button>
                 </div>
-                {isNight && !voiceReady && stage !== "mayor" && (
+                {isNight && !roundVoiceReady && stage !== "mayor" && (
                   <button
                     className="text-button"
                     onClick={() => act({ type: "NEXT" })}
@@ -787,7 +736,7 @@ export default function App() {
           </>
         )}
       </main>
-      <footer>WEREWORDS · 线下聚会助手</footer>
+
       {help && (
         <div className="modal-backdrop" onClick={() => setHelp(false)}>
           <section

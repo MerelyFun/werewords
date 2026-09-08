@@ -1,3 +1,4 @@
+import { findNightStep, getNightSteps, normalizeRoles, type RoleNightStage } from "./roles";
 import { pickWords, type Category, type Difficulty, type Word } from "./words";
 
 export type Stage =
@@ -14,11 +15,14 @@ export type Stage =
   | "accusation"
   | "discussion"
   | "verdict"
-  | "result";
+  | "result"
+  | RoleNightStage;
 export interface Settings {
   players: number;
   daySeconds: number;
   nightSeconds: number;
+  closeSeconds: number;
+  roles: Record<string, number>;
   difficulty: Difficulty;
   category: Category | "all";
 }
@@ -26,11 +30,14 @@ export const defaultSettings: Settings = {
   players: 6,
   daySeconds: 240,
   nightSeconds: 8,
+  closeSeconds: 4,
+  roles: normalizeRoles(undefined, 6),
   difficulty: "easy",
   category: "all",
 };
 export interface GameState {
   stage: Stage;
+  nightSequence: Stage[];
   settings: Settings;
   candidates: Word[];
   secret: Word | null;
@@ -48,7 +55,7 @@ export type Action =
   | { type: "VERDICT"; hit: boolean }
   | { type: "TICK"; seconds: number };
 
-export const stageLabels: Record<Stage, string> = {
+export const stageLabels: Partial<Record<Stage, string>> = {
   setup: "准备开局",
   nightIntro: "天黑请闭眼",
   mayor: "镇长选词",
@@ -67,6 +74,7 @@ export const stageLabels: Record<Stage, string> = {
 
 export const initialState: GameState = {
   stage: "setup",
+  nightSequence: [],
   settings: { ...defaultSettings },
   candidates: [],
   secret: null,
@@ -80,18 +88,9 @@ export function getStageDuration(stage: Stage, settings: Settings): number {
   if (stage === "day") return settings.daySeconds;
   if (stage === "accusation") return 15;
   if (stage === "discussion") return 60;
-  if (
-    [
-      "nightIntro",
-      "mayorClose",
-      "seer",
-      "seerClose",
-      "werewolf",
-      "werewolfClose",
-      "dayIntro",
-    ].includes(stage)
-  )
-    return settings.nightSeconds;
+  if (["nightIntro", "mayorClose", "dayIntro"].includes(stage)) return settings.closeSeconds;
+  const step = findNightStep(stage);
+  if (step) return step.duration === "close" ? settings.closeSeconds : settings.nightSeconds;
   return 0;
 }
 
@@ -112,38 +111,23 @@ function start(state: GameState, candidates?: Word[]): GameState {
       ...initialState,
       settings: { ...state.settings },
       candidates: [...selection],
+      nightSequence: ["nightIntro", "mayor", "mayorClose", ...getNightSteps(state.settings.roles).map((step) => step.id), "dayIntro"],
     },
     "nightIntro",
   );
 }
 
 function next(state: GameState): GameState {
+  const nightIndex = state.nightSequence.indexOf(state.stage);
+  if (nightIndex >= 0) {
+    const prepared = state.stage === "mayor" ? {
+      ...state, secret: state.secret ?? state.candidates[0] ?? null, candidates: [],
+    } : state;
+    return enter(prepared, state.nightSequence[nightIndex + 1] ?? "day");
+  }
   switch (state.stage) {
     case "setup":
       return start(state);
-    case "nightIntro":
-      return enter(state, "mayor");
-    case "mayor":
-      return enter(
-        {
-          ...state,
-          secret: state.secret ?? state.candidates[0] ?? null,
-          candidates: [],
-        },
-        "mayorClose",
-      );
-    case "mayorClose":
-      return enter(state, "seer");
-    case "seer":
-      return enter(state, "seerClose");
-    case "seerClose":
-      return enter(state, "werewolf");
-    case "werewolf":
-      return enter(state, "werewolfClose");
-    case "werewolfClose":
-      return enter(state, "dayIntro");
-    case "dayIntro":
-      return enter(state, "day");
     case "day":
       return enter({ ...state, guessed: false }, "discussion");
     case "accusation":
@@ -153,6 +137,8 @@ function next(state: GameState): GameState {
       return enter({ ...state, winner: null, verdict: null }, "result");
     case "result":
       return { ...initialState, settings: { ...state.settings } };
+    default:
+      return state;
   }
 }
 
@@ -168,8 +154,11 @@ export function reducer(state: GameState, action: Action): GameState {
       if (state.stage !== "setup") return state;
       const input = { ...state.settings, ...action.settings };
       // 持久化设置可能来自旧版本或被改写，只接受白名单字段和值。
+      const players = clamp(input.players, 4, 10, defaultSettings.players);
       const settings: Settings = {
-        players: clamp(input.players, 4, 10, defaultSettings.players),
+        players,
+        roles: normalizeRoles(input.roles, players),
+        closeSeconds: clamp(input.closeSeconds, 1, 15, defaultSettings.closeSeconds),
         daySeconds: clamp(
           input.daySeconds,
           60,

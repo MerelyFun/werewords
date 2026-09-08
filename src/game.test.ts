@@ -8,6 +8,7 @@ import {
   type Settings,
 } from "./game";
 import { pickWords, words } from "./words";
+import { findNightStep, getNightSteps, normalizeRoles, roleCatalog } from "./roles";
 
 function reachDay(): GameState {
   let state = reducer(initialState, {
@@ -163,11 +164,62 @@ describe("设置数据校验", () => {
       difficulty: "hard",
       category: "自然",
       players: 7,
+      roles: { ...defaultSettings.roles, villager: 5 },
     });
     const started = reducer(configured, { type: "START" });
     expect(
       reducer(started, { type: "SETTINGS", settings: { daySeconds: 60 } }),
     ).toBe(started);
+  });
+});
+
+describe("可配置角色目录与动态夜晚", () => {
+  it("闭眼等待默认4秒，与8秒看词时长独立", () => {
+    for (const stage of ["nightIntro", "mayorClose", "seerClose", "werewolfClose", "dayIntro"] as const) {
+      expect(getStageDuration(stage, defaultSettings)).toBe(4);
+    }
+    expect(getStageDuration("seer", defaultSettings)).toBe(8);
+    expect(getStageDuration("werewolf", { ...defaultSettings, closeSeconds: 2 })).toBe(8);
+    expect(getStageDuration("role:minion:close", defaultSettings)).toBe(4);
+  });
+
+  it("目录每个阶段有唯一ID，扩展角色不会查看秘密词", () => {
+    const all = roleCatalog.flatMap((role) => role.nightSteps);
+    expect(new Set(all.map((step) => step.id)).size).toBe(all.length);
+    expect(all.filter((step) => step.id.startsWith("role:")).every((step) => !step.revealSecret)).toBe(true);
+    expect(findNightStep("role:minion")?.roleId).toBe("minion");
+    expect(findNightStep("day")).toBeUndefined();
+  });
+
+  it("仅启用配置角色阶段，按目录顺序完成夜晚，全部可跳过", () => {
+    const roles = normalizeRoles({ minion: 1, masons: 2 }, 6);
+    let state = reducer(initialState, { type: "SETTINGS", settings: { roles } });
+    state = reducer(state, { type: "START", candidates: words.slice(0, 3) });
+    const visited = [];
+    for (let count = 0; state.stage !== "day" && count < 30; count++) {
+      visited.push(state.stage);
+      state = reducer(state, { type: "SKIP" });
+    }
+    expect(visited).toEqual(["nightIntro", "mayor", "mayorClose", "seer", "seerClose", "werewolf", "werewolfClose", "role:minion", "role:minion:close", "role:masons", "role:masons:close", "dayIntro"]);
+    expect(state.stage).toBe("day");
+    expect(getNightSteps(defaultSettings.roles).some((step) => step.id.startsWith("role:"))).toBe(false);
+  });
+
+  it("人数改变自动补村民，成对角色仅接受0或2，超额不溢出", () => {
+    expect(normalizeRoles({ masons: 1 }, 6).masons).toBe(0);
+    expect(normalizeRoles({ masons: 2 }, 6).masons).toBe(2);
+    expect(normalizeRoles({ minion: 1 }, 7).villager).toBe(4);
+    const full = normalizeRoles({ werewolf: 3, minion: 1, beholder: 1, masons: 2, thing: 1 }, 4);
+    expect(Object.values(full).reduce((sum, count) => sum + count, 0)).toBe(4);
+    expect(full.masons).toBe(0);
+  });
+
+  it("清除存储中的未知角色和非法数量，保留必要基础身份", () => {
+    const roles = normalizeRoles({ seer: 0, werewolf: -20, minion: "1", beholder: 0.5, masons: NaN, thing: Infinity, stranger: 3, villager: 999 }, 6);
+    expect(roles).toEqual(defaultSettings.roles);
+    expect(normalizeRoles(null, 6)).toEqual(defaultSettings.roles);
+    expect(normalizeRoles([], 6)).toEqual(defaultSettings.roles);
+    expect(normalizeRoles({ minion: 1 }, 6).minion).toBe(1);
   });
 });
 

@@ -753,3 +753,72 @@ footer {
     scroll-behavior: auto !important;
   }
 }
+
+/* Table play: opposing seats share public information, controls stay on one side. */
+.app-shell { min-height: auto; }
+.intro { padding: 22px 0 18px; }
+.intro h1 { font-size: 27px; }
+.audition { width: auto; margin: 4px auto; }
+.skip-setup { margin-bottom: 16px; }
+.role-settings { margin-top: 12px; border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.role-settings summary { cursor: pointer; font-size: 15px; }
+.role-settings summary span { float: right; color: var(--muted); font-size: 13px; }
+.role-summary,.role-note { color: var(--muted); font-size: 12px; line-height: 1.7; }
+.role-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 13px 0; border-top: 1px solid #ffffff0d; }
+.role-row strong { font-size: 14px; font-weight: 500; }
+.role-row p { margin: 4px 0 0; font-size: 11px; line-height: 1.6; color: var(--muted); }
+.role-row .stepper { gap: 8px; flex-shrink: 0; }
+.role-row .stepper output { min-width: 18px; }
+.role-count { min-width: 94px; text-align: center; }
+.role-art { width: 96px; aspect-ratio: 1; flex-shrink: 0; background-size: 200% 200%; border-radius: 16px; background-repeat: no-repeat; }
+.is-playing header { height: 44px; border: none; }
+.is-playing .brand { visibility: hidden; }
+.is-playing .pill { border-color: var(--line); font-size: 11px; min-height: 30px; padding: 3px 12px; }
+.opposite-face { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 20px 0; min-height: 180px; transform: rotate(180deg); border-top: 1px solid var(--line); text-align: center; }
+.opposite-copy { min-width: 0; flex: 1; }
+.opposite-title { font: 500 22px/1.5 var(--serif); margin: 0 0 6px; }
+.opposite-description { color: var(--muted); font-size: 11px; line-height: 1.7; margin: 5px 0; }
+.opposite-word { display: block; font: 500 34px/1.3 var(--serif); overflow-wrap: anywhere; color: var(--gold); }
+.opposite-timer { font-size: 24px; font-variant-numeric: tabular-nums; }
+.opposite-response { display: block; font-size: 32px; color: var(--gold); }
+.opposite-options { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; font-size: 18px; color: var(--gold); }
+.is-playing .stage-heading { margin: 14px 0 12px; display: flex; align-items: center; justify-content: center; gap: 12px; text-align: center; }
+.is-playing .stage-heading > div:last-child { flex: 1; }
+.is-playing .stage-heading h1 { font-size: 24px; margin: 0 0 4px; }
+.is-playing .stage-heading p { font-size: 11px; line-height: 1.7; min-height: 0; }
+.is-playing .secret-panel,.is-playing .closed-panel { min-height: 125px; padding: 12px; border-color: #34414c; }
+.is-playing .secret-panel strong { font-size: 44px; margin-bottom: 2px; }
+.is-playing .small-timer { font-size: 26px; margin-top: 2px; }
+.is-playing .closed-panel > svg,.is-playing .timer-label { display: none; }
+.is-playing .closed-panel p { margin: 4px; }
+.is-playing .word-options { flex-direction: row; gap: 7px; }
+.is-playing .word-options button { flex: 1; min-width: 0; padding: 12px 4px; font-size: 19px; overflow-wrap: anywhere; }
+.is-playing .word-options button svg { display: none; }
+.is-playing .mayor-panel { gap: 8px; }
+.is-playing .mayor-panel > small { font-size: 10px; text-align: center; }
+.is-playing .primary { min-height: 44px; font-size: 14px; padding: 10px; }
+.is-playing .big-timer { font-size: 44px; line-height: 1.2; }
+.is-playing .answer-pad { margin-top: 12px; }
+.is-playing .answer-pad button { padding: 8px; }
+.is-playing .answer-hint { margin: 4px 0 8px; min-height: 0; }
+.is-playing .stage-controls { display: flex; gap: 8px; margin-top: 12px; align-items: center; }
+.is-playing .stage-controls .secondary { min-height: 44px; padding: 8px; flex: 1; }
+.is-playing .stage-controls .skip { flex: 1.4; }
+.is-playing .stage-controls .icon-button { flex-shrink: 0; }
+.is-playing .reset-link { margin: 7px auto; }
+.is-playing .vote-panel,.is-playing .verdict-panel,.is-playing .result-panel { padding: 4px 0; }
+.is-playing .vote-panel p,.is-playing .verdict-panel p { margin: 8px 0 12px; }
+.is-playing .result-panel strong { margin: 3px; font-size: 34px; }
+.is-playing .result-panel > span { margin-bottom: 3px; }
+.is-playing .result-panel p { margin: 6px 0 12px; }
+@media (max-width: 360px) {
+  .role-art { width: 76px; }
+  .opposite-title,.is-playing .stage-heading h1 { font-size: 21px; }
+  .opposite-face { gap: 8px; min-height: 165px; }
+}
+@media (max-height: 650px) and (orientation: landscape) {
+  .is-playing { width: min(100%, 760px); }
+  .is-playing main { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 20px; }
+  .opposite-face { grid-column: 1; grid-row: 1 / 6; border-top: 0; border-left: 1px solid var(--line); padding: 10px; }
+  .is-playing main > :not(.opposite-face) { grid-column: 2; }
+}
