@@ -213,3 +213,13 @@
 - 验证：65项单元、32项Chrome E2E、生产构建、13段录音检查通过。320px截图Temp/wolf-no-difficulty-320.png已目视检查，无难度控件且折叠多选正常；旧三档设置的全池出词已确定性验证。沿用frontend-testing-debugging的Playwright路径（Browser plugin not available）。
 - 修复另一任务10a4b26单独提交组件造成的CI编译失败；统一发布结果后补。
 
+
+## 2026-09-09：镇长候选词数设置
+
+- 更多设置新增镇长候选词数步进器，2–6个，默认3个；旧设置兼容默认值，异常数值归一化，开局和再来一局使用所设数量。
+- npm test：65项通过；npm run build通过（既有主包大于500kB提示）；Chrome设置与角色回归9项通过。
+- Browser plugin not available，按前端测试技能使用现有Playwright/Chrome；320×740验证上下限、刷新保存、6个不同候选及2个候选、无横向溢出和页面/控制台错误。截图C:/Users/革命成功/AppData/Local/Temp/wolf-candidate-setting.png已目视检查。
+- 本轮未提交或部署；下一步按发布安排上线，并进行真实手机试玩。
+
+发布完成：d320c3c，GitHub Actions34264834007成功，修复前次组件调用不匹配导致的构建失败。正式站Chrome320×740下拉检查通过：默认收起、多选摘要、刷新保存、Enter展开、300px内部滚动、无横向溢出与pageerror、无难度按钮；截图Temp/wolf-library-dropdown-live.png。390px线上新库无声预览验证候选赵云／端午节／创可贴均属万象趣猜，无页面错误与溢出；首次未隔离音频的候选断言未通过，此处不将其计为真实音频验证。真实录音回归依据本地全量E2E。下一步：手机聚会试玩。
+
