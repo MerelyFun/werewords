@@ -1,0 +1,44 @@
+[
+  {
+    "id": "github-handle",
+    "name": "汉兜 handle",
+    "repository": "antfu/handle",
+    "url": "https://github.com/antfu/handle",
+    "revision": "2003b777f507ed18c1c80304fd6894280c56ad58",
+    "importedAt": "2026-09-09",
+    "license": "MIT",
+    "licensePath": "assets/wordlists/github/handle/LICENSE.txt",
+    "files": [
+      {
+        "upstreamPath": "src/answers/list.ts",
+        "rawPath": "assets/wordlists/github/handle/list.ts.txt",
+        "sha256": "805cee5a2a13d038db9ac03a5cdb8241b9e625ad260faba5a7e271c87c077089",
+        "url": "https://github.com/antfu/handle/blob/2003b777f507ed18c1c80304fd6894280c56ad58/src/answers/list.ts"
+      }
+    ]
+  },
+  {
+    "id": "github-parti",
+    "name": "Parti",
+    "repository": "glink25/Parti",
+    "url": "https://github.com/glink25/Parti",
+    "revision": "a4aa37c8b6e8eef66886c265df73ab8ae0bafa62",
+    "importedAt": "2026-09-09",
+    "license": "PolyForm Noncommercial 1.0.0",
+    "licensePath": "assets/wordlists/github/parti/LICENSE.txt",
+    "files": [
+      {
+        "upstreamPath": "apps/room-guess-draw/src/word-bank.ts",
+        "rawPath": "assets/wordlists/github/parti/word-bank.ts.txt",
+        "sha256": "6175ce19a684e20871b993bf438662474b10e6e349dd8c58d217708a7ffd3765",
+        "url": "https://github.com/glink25/Parti/blob/a4aa37c8b6e8eef66886c265df73ab8ae0bafa62/apps/room-guess-draw/src/word-bank.ts"
+      },
+      {
+        "upstreamPath": "apps/room-guess-draw/src/word-bank-extra.ts",
+        "rawPath": "assets/wordlists/github/parti/word-bank-extra.ts.txt",
+        "sha256": "9ac3985356a865b52efb3113ccac869d7238b3524c3629235cf649042f5a9594",
+        "url": "https://github.com/glink25/Parti/blob/a4aa37c8b6e8eef66886c265df73ab8ae0bafa62/apps/room-guess-draw/src/word-bank-extra.ts"
+      }
+    ]
+  }
+]

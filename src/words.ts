@@ -1,6 +1,9 @@
 import partyNight from "./data/party-night.json" with { type: "json" };
 import steamWords from "./data/steam-words.json" with { type: "json" };
 import steamSources from "./data/steam-sources.json" with { type: "json" };
+import handleWords from "./data/handle-words.json" with { type: "json" };
+import partiWords from "./data/parti-words.json" with { type: "json" };
+import githubSources from "./data/github-sources.json" with { type: "json" };
 
 export type Difficulty = "easy" | "medium" | "hard";
 export type PlayDifficulty = "easy" | "hard";
@@ -76,11 +79,19 @@ export interface WordLibrary {
 }
 
 const levels: Record<number, Difficulty> = { 1: "easy", 2: "medium", 3: "hard" };
+const githubWords: Record<string, Word[]> = {
+  "github-handle": handleWords.map(word => ({ ...word, difficulty: word.difficulty as Difficulty })),
+  "github-parti": partiWords.map(word => ({ ...word, difficulty: word.difficulty as Difficulty })),
+};
 /** 新词库只需提供数据适配和目录项；抽词、主题与难度均读取此目录。 */
 export const wordLibraries: WordLibrary[] = [
   { id: "builtin", name: "原有精选", words, difficulties: [
     { id: "easy", label: "标准" }, { id: "hard", label: "挑战" },
   ] },
+  ...githubSources.map(source => ({
+    id: source.id, name: source.name, words: githubWords[source.id],
+    difficulties: [{ id: "easy" as const, label: "标准" }, { id: "hard" as const, label: "挑战" }],
+  })),
   ...steamSources.map(({ sourceId, name }): WordLibrary => ({
     id: `steam-${sourceId}`,
     name,

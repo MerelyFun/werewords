@@ -1,0 +1,2546 @@
+[
+  {
+    "id": "github-handle-7059d205e0b0",
+    "text": "路不拾遗",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-55ec47cb6c80",
+    "text": "恬不知耻",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-bbb90ab4af1e",
+    "text": "货真价实",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-4620c543277f",
+    "text": "彬彬有礼",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-48b11cecdd96",
+    "text": "里里外外",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-c4ece82a4069",
+    "text": "志在必得",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-691e82089c2d",
+    "text": "十指连心",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-0bbab49bbb87",
+    "text": "如痴如醉",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-1e42e001ff9c",
+    "text": "一诺无辞",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-ffe35e3effb0",
+    "text": "婀娜多姿",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-f2635bcb1d78",
+    "text": "不期而遇",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-569188e9427e",
+    "text": "见缝插针",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-3571dbfbefc7",
+    "text": "颐指气使",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-2f1ffbd83568",
+    "text": "相见恨晚",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-42a6c7d73942",
+    "text": "心甘情愿",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-300c4fc869d8",
+    "text": "穷奢极欲",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-36804b506fe2",
+    "text": "艰苦卓绝",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-dbab58fb2609",
+    "text": "水天一色",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-c193e98c3b1b",
+    "text": "有心无力",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-c649fdf9a091",
+    "text": "志同道合",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-6870896641ef",
+    "text": "错综复杂",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-ee2fe30ef869",
+    "text": "名不虚传",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-c3af4de49ff6",
+    "text": "夫唱妇随",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-3f09735635cd",
+    "text": "万无一失",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-aa775193397e",
+    "text": "姹紫嫣红",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-48bc9fb6e8d2",
+    "text": "荡然无存",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-a591f7d8fc4e",
+    "text": "耿耿于怀",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-755cf6f1778b",
+    "text": "切肤之痛",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-a04fc1e2821b",
+    "text": "天南海北",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-1935f2e8cfac",
+    "text": "地动山摇",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-c3ed4946af14",
+    "text": "福寿安康",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-087f3a005726",
+    "text": "虎虎生威",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-88c57048b178",
+    "text": "酒虎诗龙",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-657da17637f8",
+    "text": "虎啸风生",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-df89a75dbcae",
+    "text": "卧虎藏龙",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-25706548d245",
+    "text": "虎视眈眈",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-85c96b311d58",
+    "text": "春华秋实",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-1b74576caac0",
+    "text": "一面之辞",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-a0f6d31b980c",
+    "text": "变化莫测",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-d9b8b7acf414",
+    "text": "穷山恶水",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-6d496e5a2d4d",
+    "text": "百废待兴",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-23b52c02740a",
+    "text": "百年树人",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-41ee4b273ba9",
+    "text": "吃里扒外",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-29fbf8784d9e",
+    "text": "井然有条",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-286bd758072b",
+    "text": "本性难移",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-f1ddd962dfa6",
+    "text": "口是心非",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-dadfe4be3ab8",
+    "text": "雄心勃勃",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-343ed1785a73",
+    "text": "各有千秋",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-b3ef58211590",
+    "text": "异口同声",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-25392979ae96",
+    "text": "因噎废食",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-d5afc73eba4a",
+    "text": "惊世骇俗",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-7fd373b84ce4",
+    "text": "同甘共苦",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-7b51dc5c2271",
+    "text": "见风使舵",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-71daf9db0caf",
+    "text": "地北天南",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-c8ccf51c2e29",
+    "text": "锦上添花",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-0a7fdd19d74d",
+    "text": "应对如流",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-9af1b214d56c",
+    "text": "入木三分",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-3590340a4f4c",
+    "text": "瓜田李下",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-64d80774f7f2",
+    "text": "语不投机",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-bf52aeaac531",
+    "text": "孜孜不倦",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-dc97687f153a",
+    "text": "胆战心惊",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-99c4ab2fa926",
+    "text": "人老珠黄",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-1245cb9b5c6b",
+    "text": "寄人篱下",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-af8c180cd400",
+    "text": "行尸走肉",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-e938ab2c6e16",
+    "text": "国泰民安",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-4a01d2717fa2",
+    "text": "轻声细语",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-a3d25f1841a6",
+    "text": "自不量力",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-c7ad8afce28a",
+    "text": "平步青云",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-18cc88d910d8",
+    "text": "谈笑风生",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-af157ca75577",
+    "text": "见义勇为",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-b1d0e048029a",
+    "text": "回天乏术",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-df500f6563e2",
+    "text": "首当其冲",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-ab8b4f53386b",
+    "text": "千姿百态",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-add71e2e3259",
+    "text": "蓬荜生辉",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-240ec00ad749",
+    "text": "苦口婆心",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-3a45cc21ec09",
+    "text": "独树一帜",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-c5e2f084f862",
+    "text": "走马观花",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-0cc393c9b699",
+    "text": "燃眉之急",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-e15bc513fd2c",
+    "text": "不翼而飞",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-7d7889a00287",
+    "text": "不言而喻",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-a02241e28cfc",
+    "text": "花前月下",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-e1610a3cd643",
+    "text": "春风化雨",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-09771437957e",
+    "text": "高深莫测",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-c9cdbe7ec78a",
+    "text": "铁石心肠",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-9939b2373dac",
+    "text": "飞蛾扑火",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-114ed52e2b9b",
+    "text": "鬼斧神工",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-e73e0539ee71",
+    "text": "无中生有",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-a2af611d294c",
+    "text": "风调雨顺",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-1ce0163df1fc",
+    "text": "坐吃山空",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-7df557c5ab13",
+    "text": "愤世嫉俗",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-d7758298f097",
+    "text": "破釜沉舟",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-d48a6e1b7e8d",
+    "text": "急转直下",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-46d6377ff6c1",
+    "text": "独具匠心",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-192cdf49447a",
+    "text": "不耻下问",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-3bf4e934534b",
+    "text": "声名鹊起",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-64f8ceae48e4",
+    "text": "适得其反",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-63dcf4c5b075",
+    "text": "精益求精",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-532615aa15ff",
+    "text": "无往不利",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-4383e6bdbdfd",
+    "text": "百口莫辩",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-1cf89c24f4cb",
+    "text": "与世无争",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-295b00d4eae8",
+    "text": "返老还童",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-6fc123d8d143",
+    "text": "火上浇油",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-c5d7ec40d2bb",
+    "text": "志在千里",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-b3e0361df106",
+    "text": "闲情逸致",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-e359c6032a04",
+    "text": "敬而远之",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-363d27e0b8f1",
+    "text": "众目睽睽",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-71ef2667062a",
+    "text": "蝇头小利",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-56d0e9876542",
+    "text": "义结金兰",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-a5df13cddb09",
+    "text": "猴年马月",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-fb3eb49dacd5",
+    "text": "排山倒海",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-4d91162ca744",
+    "text": "拾金不昧",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-12d16d81310f",
+    "text": "喜出望外",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-b8d2e9b86dba",
+    "text": "鸡犬不宁",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-8b467ebcba19",
+    "text": "身临其境",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-9e2dff7a78d7",
+    "text": "同归于尽",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-35f42c5c832a",
+    "text": "杯水车薪",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-0599b1e348d3",
+    "text": "日新月异",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-604a2fcf99fa",
+    "text": "未雨绸缪",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-b880a6697cc0",
+    "text": "居安思危",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-a8a708aaa972",
+    "text": "百里挑一",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-c7b1b0486cdd",
+    "text": "昙花一现",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-37aa0aef3977",
+    "text": "雪中送炭",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-c120334b6128",
+    "text": "成王败寇",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-e156b6c3c3da",
+    "text": "戴罪立功",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-c0b7b1e4c0b3",
+    "text": "天马行空",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-7e01cf014454",
+    "text": "釜底抽薪",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-11db1f066ff6",
+    "text": "既往不咎",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-486efebb7bb1",
+    "text": "花容月貌",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-dbbbb96ebe8c",
+    "text": "按部就班",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-55c44304d1ff",
+    "text": "闭门造车",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-78ba222825cc",
+    "text": "囫囵吞枣",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-cdaccbc4c299",
+    "text": "鲜为人知",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-d6feaf4345ff",
+    "text": "颠三倒四",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-e6e2403d830a",
+    "text": "惊弓之鸟",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-0049e016099b",
+    "text": "纸上谈兵",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-c9f3da9e1925",
+    "text": "今非昔比",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-712699adfc80",
+    "text": "琳琅满目",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-e1ae29a5bddd",
+    "text": "百家争鸣",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-545b1335134a",
+    "text": "殊途同归",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-d0d44b6f91a9",
+    "text": "玉石俱焚",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-03ac53b3d883",
+    "text": "不寒而栗",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-f2cc00c94465",
+    "text": "矢志不渝",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-4fcbdb71bbab",
+    "text": "若无其事",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-387ae6d7a399",
+    "text": "普天同庆",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-cf6e14410710",
+    "text": "见仁见智",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-ddb5b5bd9eed",
+    "text": "举一反三",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-35d0064cb993",
+    "text": "神出鬼没",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-b224b6897eb0",
+    "text": "如履薄冰",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-c74779c5da7b",
+    "text": "口耳相传",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-a83183978535",
+    "text": "光阴似箭",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-1652fdfaf78e",
+    "text": "飞来横祸",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-ac7e0eaee5d2",
+    "text": "雾里看花",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-a52888344b40",
+    "text": "否极泰来",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-531652222689",
+    "text": "鼠目寸光",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-8cbda60035f5",
+    "text": "风起云涌",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-63954203fa4c",
+    "text": "飞檐走壁",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-c0d18ab29444",
+    "text": "掩耳盗铃",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-82a45b82d1f1",
+    "text": "半信半疑",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-e67354a73cf0",
+    "text": "乐不思蜀",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-780855e24d47",
+    "text": "杯弓蛇影",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-383c1ba4b7a3",
+    "text": "痴人说梦",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-25da57f0c1ad",
+    "text": "水性杨花",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-c9cce0719498",
+    "text": "塞翁失马",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-6e485b96db0c",
+    "text": "背井离乡",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-97b7ef6c3299",
+    "text": "阴差阳错",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-1d516344af37",
+    "text": "鸡飞蛋打",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-a1849f72be47",
+    "text": "入土为安",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-b21be65a41da",
+    "text": "信口雌黄",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-46b7b1f65886",
+    "text": "捉襟见肘",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-1990b25b944f",
+    "text": "过河拆桥",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-150b21b070ec",
+    "text": "中流砥柱",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-7cb970a4e944",
+    "text": "民不聊生",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-674e3f36cdb7",
+    "text": "穷困潦倒",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-5c20df7f67d1",
+    "text": "前功尽弃",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-5432de071ba9",
+    "text": "上蹿下跳",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-6a337bf4d5ed",
+    "text": "心不在焉",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-23bc86996991",
+    "text": "德高望重",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-e0768bcda84a",
+    "text": "难兄难弟",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-492ddb1c8b3a",
+    "text": "败兴而归",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-7e7807056a62",
+    "text": "举手之劳",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-e68385960842",
+    "text": "和蔼可亲",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-c5321f8d78ca",
+    "text": "鳏寡孤独",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-035b07895f9a",
+    "text": "金蝉脱壳",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-42e37e932e73",
+    "text": "做贼心虚",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-0b72ca5bde11",
+    "text": "南辕北辙",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-02eca406738e",
+    "text": "大张旗鼓",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-a4089c3a0f50",
+    "text": "洛阳纸贵",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-9c5c1413d736",
+    "text": "若隐若现",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-8ed971322bc7",
+    "text": "家喻户晓",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-14783b6815f4",
+    "text": "花拳绣腿",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-ec1bbf49ba67",
+    "text": "腰缠万贯",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-767c85d28c07",
+    "text": "缘木求鱼",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-3bd86a21d300",
+    "text": "日理万机",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-5f249b45d13b",
+    "text": "白雪皑皑",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-352dc3e4f215",
+    "text": "拖泥带水",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-33286b3835db",
+    "text": "博大精深",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-fe3732783052",
+    "text": "逢凶化吉",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-a242010fa8a7",
+    "text": "欲盖弥彰",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-493e7391920b",
+    "text": "循规蹈矩",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-524a51df1a6b",
+    "text": "笨鸟先飞",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-73ed2feb717a",
+    "text": "玩世不恭",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-194c76a951b5",
+    "text": "一蹶不振",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-ae7753845995",
+    "text": "心宽体胖",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-6ff72b59aa42",
+    "text": "吉光片羽",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-88570c0e52f2",
+    "text": "泰然自若",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-5122a5aa4206",
+    "text": "酣畅淋漓",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-af9e0d54e7c8",
+    "text": "头晕目眩",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-e0337df6a23a",
+    "text": "左邻右舍",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-25427d63cef6",
+    "text": "集思广益",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-3751cad594ff",
+    "text": "水涨船高",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-40a653ed3830",
+    "text": "藕断丝连",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-763bfc9c8005",
+    "text": "张牙舞爪",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-1ee91ec4deb0",
+    "text": "暴殄天物",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-fcc66153c24b",
+    "text": "含辛茹苦",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-efd88aacf955",
+    "text": "差强人意",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-cd5661fb11b3",
+    "text": "马不停蹄",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-dee66bb09fe4",
+    "text": "快马加鞭",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-ad614825101a",
+    "text": "形影不离",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-0de681df0ab2",
+    "text": "鹏程万里",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-c824fa6982cc",
+    "text": "临危不惧",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-e6be03b1b962",
+    "text": "寂然无声",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-21523884c795",
+    "text": "忐忑不安",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-f68adee37a57",
+    "text": "宁死不屈",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-c74c22ffa0b1",
+    "text": "前赴后继",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-7cc2b53d481f",
+    "text": "立竿见影",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-ff2292ed7432",
+    "text": "得天独厚",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-d45b6c544ad1",
+    "text": "甘之如饴",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-3037ec6475d4",
+    "text": "大智若愚",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-95122fae853f",
+    "text": "以卵击石",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-633aea79be36",
+    "text": "四平八稳",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-b7b865f3a1f7",
+    "text": "一步登天",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-3883fb9052b7",
+    "text": "冰清玉洁",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-44096ac0e727",
+    "text": "步步为营",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-9292d6d0c4c9",
+    "text": "放荡不羁",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-c32cecf71524",
+    "text": "称心如意",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-41c6723dbdde",
+    "text": "怒发冲冠",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-b4e009b46392",
+    "text": "满目疮痍",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-0743db355dfc",
+    "text": "腥风血雨",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-eaedee6b6ab8",
+    "text": "天方夜谭",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-30b79c1bb274",
+    "text": "狼心狗肺",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-01df1843c685",
+    "text": "颠倒是非",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-ad8314828150",
+    "text": "鱼目混珠",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-eae64bf75118",
+    "text": "八仙过海",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-dbf485336244",
+    "text": "纷纷扰扰",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-404d0c6c2a5b",
+    "text": "层出不穷",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-a608c3a5e036",
+    "text": "出其不意",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-91fd7a23f269",
+    "text": "如坐针毡",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-7bea3f45dafd",
+    "text": "落叶归根",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-fa68eaf792f4",
+    "text": "恩将仇报",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-31f5550f9486",
+    "text": "不辞而别",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-66c6f517b7dd",
+    "text": "顶天立地",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-c81b2cefeb5c",
+    "text": "谈虎色变",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-416f3fc65e37",
+    "text": "浪子回头",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-88875553e24c",
+    "text": "异曲同工",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-b182fece1503",
+    "text": "羽化登仙",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-b8d88c8957e5",
+    "text": "细水长流",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-9a13d1a1d2bc",
+    "text": "屡试不爽",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-db997e1f2267",
+    "text": "改过自新",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-bde86bc244e5",
+    "text": "挺身而出",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-83d55a8d81f5",
+    "text": "雄心壮志",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-4b55b2fedcda",
+    "text": "十有八九",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-505631caa47e",
+    "text": "与时俱进",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-ea1b16b8f0ec",
+    "text": "举世闻名",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-cca8ac748d12",
+    "text": "游手好闲",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-7da093638688",
+    "text": "意广才疏",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-6944cea252f5",
+    "text": "不求甚解",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-6813d768971b",
+    "text": "莺歌燕舞",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-e891acf13a9d",
+    "text": "万事如意",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-7d2ceb39aa14",
+    "text": "心灰意冷",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-4bfb409bee4e",
+    "text": "尊师重道",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-54f8a7d6d1c5",
+    "text": "不由自主",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-5a17a350c2ee",
+    "text": "隔墙有耳",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-465182042ad4",
+    "text": "闻所未闻",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-1810406b53e3",
+    "text": "财运亨通",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-650671b3f029",
+    "text": "胡思乱想",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-0991c0dc5565",
+    "text": "神乎其技",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-181c39df6bd4",
+    "text": "金榜题名",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-406b8c877da5",
+    "text": "将心比心",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-7a46dd07e901",
+    "text": "子虚乌有",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-4590625c105c",
+    "text": "不堪回首",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-ecff32168ff9",
+    "text": "重蹈覆辙",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-11eae789d303",
+    "text": "一本正经",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-fe8ed040f8e4",
+    "text": "尽力而为",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-106d62079298",
+    "text": "祸起萧墙",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-83f5fb016cbe",
+    "text": "和颜悦色",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-f70327a2887f",
+    "text": "伤天害理",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-2c837416d245",
+    "text": "情窦初开",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-6e7831353afb",
+    "text": "鸡飞狗跳",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-6092f35b6eff",
+    "text": "有备无患",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-70c63b1b5619",
+    "text": "巧言令色",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-7b4363601ebb",
+    "text": "心花怒放",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-0a84da15f6cd",
+    "text": "衣冠禽兽",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-ac019f4e5da1",
+    "text": "破烂不堪",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-086c25e31b9d",
+    "text": "坐享其成",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-0c943457c949",
+    "text": "金石为开",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-ef5e9c84861a",
+    "text": "答非所问",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-42f48bfb6807",
+    "text": "夜半三更",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-cf0980b60c9b",
+    "text": "暮鼓晨钟",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-5fdfef8cb4de",
+    "text": "大浪淘沙",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-1f8cbd3e5fe1",
+    "text": "因时制宜",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-6d0f6c3a93c2",
+    "text": "富甲一方",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-76d194ecf436",
+    "text": "唯命是从",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-cae7d5765253",
+    "text": "根深蒂固",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-6cdeac5ad3d5",
+    "text": "死而后已",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-513fbbf5bef2",
+    "text": "逢场作戏",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-5a7f121834c8",
+    "text": "花开富贵",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-51ed20c28b0a",
+    "text": "浅尝辄止",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-750c0dd4c25c",
+    "text": "火烧眉毛",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-2f250585e46e",
+    "text": "信手拈来",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-226356e85ccb",
+    "text": "四大皆空",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-2ef53428a154",
+    "text": "春风满面",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-679c80d40bd7",
+    "text": "守株待兔",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-0453cfa40245",
+    "text": "凤毛麟角",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-0a0d26a3cf35",
+    "text": "云淡风轻",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-8d036b7b022a",
+    "text": "安然无恙",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-12827a586c16",
+    "text": "出人头地",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-d87bc720d51d",
+    "text": "前仆后继",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-6caccac7db77",
+    "text": "别具匠心",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-b1e6c443bbb8",
+    "text": "一决雌雄",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-84219ecd0a00",
+    "text": "触类旁通",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-81de81637926",
+    "text": "骄奢淫逸",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-435f61ee7ed8",
+    "text": "呼朋唤友",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-ab33f81ae4e3",
+    "text": "无济于事",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-d281cda6a440",
+    "text": "举世无双",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-72c98ac92086",
+    "text": "拭目以待",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-4b486bb53ae2",
+    "text": "稀里糊涂",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-efd0907d88b0",
+    "text": "保家卫国",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-2371d76f8821",
+    "text": "青红皂白",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-2c7a73cc1488",
+    "text": "地久天长",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-34d8e7897e02",
+    "text": "骑虎难下",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-be12270e62cc",
+    "text": "物竞天择",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-e84e77cf4b98",
+    "text": "刻不容缓",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-e31a338924f0",
+    "text": "闭月羞花",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-be9790ec6ba7",
+    "text": "人面兽心",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-d1aabab6d882",
+    "text": "感人肺腑",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-d18d1d152ff9",
+    "text": "求之不得",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-0264f619ec20",
+    "text": "左顾右盼",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-71249e3a8904",
+    "text": "峰回路转",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-7d523f38660d",
+    "text": "手足无措",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-4964b1a00a05",
+    "text": "抽丝剥茧",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-1c62be509b5d",
+    "text": "功成名就",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-79f91f5f24f3",
+    "text": "大义凛然",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-5fec96bd8c63",
+    "text": "陈词滥调",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-469c892d40ca",
+    "text": "舍本逐末",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-91471e372948",
+    "text": "妙笔生花",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-cfabfb8d8716",
+    "text": "乌合之众",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-fa579908a17d",
+    "text": "吃里爬外",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-3157b8e1de38",
+    "text": "如雷贯耳",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-0bd651060707",
+    "text": "昏天黑地",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-c5239db6645b",
+    "text": "疑神疑鬼",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-aa2c4124d3c6",
+    "text": "感同身受",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-00609ef67af7",
+    "text": "四分五裂",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-6482e475c3cf",
+    "text": "不同凡响",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-dd857296b4c1",
+    "text": "心有灵犀",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-6d521bf1f26e",
+    "text": "书香世家",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-abaa52e9741b",
+    "text": "如愿以偿",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-aa919f6a158a",
+    "text": "曲水流觞",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-fb406a21cf23",
+    "text": "脱口而出",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-6678c117ede7",
+    "text": "海纳百川",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-5888c086e91d",
+    "text": "众矢之的",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-dfd23e909050",
+    "text": "道貌岸然",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-e2b40afbd9db",
+    "text": "郁郁寡欢",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-b446b4897458",
+    "text": "呆若木鸡",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-9e679ea82c82",
+    "text": "装疯卖傻",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-592cc724292d",
+    "text": "山高水长",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-f32541730cd2",
+    "text": "后羿射日",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-40d54e9750e0",
+    "text": "旁门左道",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-3e8e2e02dad4",
+    "text": "入不敷出",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-bd9ec3902d67",
+    "text": "茕茕孑立",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-35ecacb74bbd",
+    "text": "邯郸学步",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-9fe6652b5b6c",
+    "text": "九霄云外",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-87dea45fea3e",
+    "text": "绝世佳人",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-a90ef3aafafc",
+    "text": "耳目一新",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-9407945d1008",
+    "text": "垂头丧气",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-cdc893e19278",
+    "text": "胆大包天",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-f2fcf680948b",
+    "text": "以己度人",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-737f1cbe1ca9",
+    "text": "视若无睹",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-b0c6e13eec12",
+    "text": "投其所好",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-2a2471ab8067",
+    "text": "循序渐进",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-912383ff2780",
+    "text": "晴天霹雳",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-0faa97ce647c",
+    "text": "地广人稀",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-203227030ee2",
+    "text": "吹毛求疵",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-33aa3c011a5c",
+    "text": "勉为其难",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-b66b4c8a507d",
+    "text": "滚瓜烂熟",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-577610c52f02",
+    "text": "不可理喻",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-fb736707cb43",
+    "text": "坐立不安",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-b0f18b0e07c9",
+    "text": "金盆洗手",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-1fbf37889714",
+    "text": "万代千秋",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-30fd68b873fe",
+    "text": "引经据典",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-3cb3b2621ad5",
+    "text": "独有千秋",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-9343e1c1ed51",
+    "text": "久别重逢",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-1c769e7aa396",
+    "text": "先入为主",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-7c7ec2f7ec84",
+    "text": "空中楼阁",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-ed6f2a40f1ff",
+    "text": "无声无息",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-a120a747f744",
+    "text": "惟妙惟肖",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-f365f474bf4a",
+    "text": "英姿飒爽",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-7b4b06fa6a2e",
+    "text": "举棋不定",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-14b9af4f1a94",
+    "text": "江河日下",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-67842559bcee",
+    "text": "建功立业",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-5cd9cc6890ff",
+    "text": "吃喝玩乐",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-5ce3b89869e2",
+    "text": "无所事事",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-14e649374173",
+    "text": "悲天悯人",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-24f9f28c9349",
+    "text": "捕风捉影",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-7d291ca5c8fe",
+    "text": "良药苦口",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-9df5c53235a2",
+    "text": "误人子弟",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-4adaee54397d",
+    "text": "破镜重圆",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-b6e101afd3b5",
+    "text": "独一无二",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-c10ad1b326d8",
+    "text": "金玉良缘",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-6ce7d5a077f0",
+    "text": "老态龙钟",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-65fcbbaddaba",
+    "text": "正大光明",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-ecffab802094",
+    "text": "起早贪黑",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-df6117860304",
+    "text": "笑里藏刀",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-98ef524f0b84",
+    "text": "浑水摸鱼",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-5060511bfd82",
+    "text": "微不足道",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-20a8fb7b9d0a",
+    "text": "永无止境",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-4bdfb0e85daf",
+    "text": "机关算尽",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-91d52585a375",
+    "text": "声情并茂",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-42be67fd6a73",
+    "text": "淋漓尽致",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-d893427e05d3",
+    "text": "眼高手低",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-68cc9fecce5a",
+    "text": "千里迢迢",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-1442d09e0026",
+    "text": "黯然失色",
+    "category": "成语",
+    "difficulty": "hard"
+  },
+  {
+    "id": "github-handle-f8735bb9c922",
+    "text": "言行不一",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-1efccb07417f",
+    "text": "双喜临门",
+    "category": "成语",
+    "difficulty": "easy"
+  },
+  {
+    "id": "github-handle-08505a96a705",
+    "text": "滔滔不绝",
+    "category": "成语",
+    "difficulty": "hard"
+  }
+]
